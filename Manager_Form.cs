@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace DOAN
 {
-    public partial class Form1 : Form
+    public partial class Manager_Form : Form
     {
-        public Form1()
+        public Manager_Form()
         {
             InitializeComponent();
-        }
-
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            Form1 a = new Form1();
-            a.Close();
         }
     }
 }

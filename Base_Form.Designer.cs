@@ -1,6 +1,6 @@
 ﻿namespace DOAN
 {
-    partial class Form2
+    partial class Base_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -36,47 +36,50 @@
             // btKH
             // 
             this.btKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btKH.Location = new System.Drawing.Point(236, 58);
-            this.btKH.Margin = new System.Windows.Forms.Padding(2);
+            this.btKH.Location = new System.Drawing.Point(315, 71);
+            this.btKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKH.Name = "btKH";
-            this.btKH.Size = new System.Drawing.Size(134, 64);
+            this.btKH.Size = new System.Drawing.Size(179, 79);
             this.btKH.TabIndex = 4;
             this.btKH.Text = "Khách hàng";
             this.btKH.UseVisualStyleBackColor = true;
+            this.btKH.Click += new System.EventHandler(this.btKH_Click);
             // 
             // btNVKS
             // 
             this.btNVKS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btNVKS.Location = new System.Drawing.Point(14, 58);
-            this.btNVKS.Margin = new System.Windows.Forms.Padding(2);
+            this.btNVKS.Location = new System.Drawing.Point(19, 71);
+            this.btNVKS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btNVKS.Name = "btNVKS";
-            this.btNVKS.Size = new System.Drawing.Size(144, 64);
+            this.btNVKS.Size = new System.Drawing.Size(192, 79);
             this.btNVKS.TabIndex = 3;
             this.btNVKS.Text = "Nhân viên KS";
             this.btNVKS.UseVisualStyleBackColor = true;
+            this.btNVKS.Click += new System.EventHandler(this.btNVKS_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Fax", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Brown;
-            this.label1.Location = new System.Drawing.Point(14, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(19, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 32);
+            this.label1.Size = new System.Drawing.Size(436, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mời bạn chọn chức năng";
             // 
-            // Form2
+            // Base_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 148);
+            this.ClientSize = new System.Drawing.Size(517, 182);
             this.Controls.Add(this.btKH);
             this.Controls.Add(this.btNVKS);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Base_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản Lý Khách Sạn";
             this.ResumeLayout(false);
             this.PerformLayout();
 

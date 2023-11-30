@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace DOAN
 {
-    public partial class Form2 : Form
+    public partial class Login_Form : Form
     {
-        public Form2()
+        public Login_Form()
         {
             InitializeComponent();
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Login_Form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
