@@ -113,6 +113,7 @@
             this.btEnter.Size = new System.Drawing.Size(195, 46);
             this.btEnter.TabIndex = 4;
             this.btEnter.Text = "Đăng Nhập";
+            this.btEnter.Click += new System.EventHandler(this.btEnter_Click);
             // 
             // txtPass
             // 
@@ -133,7 +134,7 @@
             this.txtPass.Location = new System.Drawing.Point(645, 208);
             this.txtPass.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '!';
+            this.txtPass.PasswordChar = '*';
             this.txtPass.PlaceholderText = "Mật Khẩu";
             this.txtPass.SelectedText = "";
             this.txtPass.Size = new System.Drawing.Size(415, 66);
@@ -218,7 +219,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login_Form";

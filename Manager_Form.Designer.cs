@@ -28,120 +28,148 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Form));
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btExitManager = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btView = new Guna.UI2.WinForms.Guna2Button();
+            this.btManage = new Guna.UI2.WinForms.Guna2Button();
+            this.lbNotice = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.roomManager1 = new DOAN._controllManager.RoomManager();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Button1
+            // btExitManager
             // 
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Silver;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button1.Location = new System.Drawing.Point(12, 12);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(40, 40);
-            this.guna2Button1.TabIndex = 0;
+            this.btExitManager.BorderRadius = 18;
+            this.btExitManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btExitManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btExitManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btExitManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btExitManager.FillColor = System.Drawing.Color.Silver;
+            this.btExitManager.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btExitManager.ForeColor = System.Drawing.Color.White;
+            this.btExitManager.Image = ((System.Drawing.Image)(resources.GetObject("btExitManager.Image")));
+            this.btExitManager.ImageSize = new System.Drawing.Size(30, 30);
+            this.btExitManager.Location = new System.Drawing.Point(12, 12);
+            this.btExitManager.Name = "btExitManager";
+            this.btExitManager.Size = new System.Drawing.Size(40, 40);
+            this.btExitManager.TabIndex = 0;
+            this.btExitManager.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.guna2Button3);
-            this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btView);
+            this.panel1.Controls.Add(this.btManage);
+            this.panel1.Controls.Add(this.lbNotice);
             this.panel1.Location = new System.Drawing.Point(100, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(725, 76);
+            this.panel1.Size = new System.Drawing.Size(854, 76);
             this.panel1.TabIndex = 1;
+            // 
+            // btView
+            // 
+            this.btView.BorderRadius = 15;
+            this.btView.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btView.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btView.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btView.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btView.Font = new System.Drawing.Font("Century", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btView.ForeColor = System.Drawing.Color.Black;
+            this.btView.Location = new System.Drawing.Point(637, 15);
+            this.btView.Name = "btView";
+            this.btView.Size = new System.Drawing.Size(196, 45);
+            this.btView.TabIndex = 2;
+            this.btView.Text = "Xem báo cáo";
+            // 
+            // btManage
+            // 
+            this.btManage.BorderRadius = 15;
+            this.btManage.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btManage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btManage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btManage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btManage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btManage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btManage.Font = new System.Drawing.Font("Century", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btManage.ForeColor = System.Drawing.Color.Black;
+            this.btManage.Location = new System.Drawing.Point(389, 15);
+            this.btManage.Name = "btManage";
+            this.btManage.Size = new System.Drawing.Size(215, 45);
+            this.btManage.TabIndex = 1;
+            this.btManage.Text = "Quản lý phòng";
+            this.btManage.Click += new System.EventHandler(this.btManage_Click);
+            // 
+            // lbNotice
+            // 
+            this.lbNotice.AutoSize = true;
+            this.lbNotice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbNotice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbNotice.Font = new System.Drawing.Font("Corbel", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbNotice.Location = new System.Drawing.Point(13, 9);
+            this.lbNotice.Name = "lbNotice";
+            this.lbNotice.Size = new System.Drawing.Size(343, 51);
+            this.lbNotice.TabIndex = 0;
+            this.lbNotice.Text = "Chức năng quản lý";
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.roomManager1);
             this.panel2.Location = new System.Drawing.Point(9, 94);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(860, 450);
+            this.panel2.Size = new System.Drawing.Size(1043, 447);
             this.panel2.TabIndex = 2;
             // 
-            // label1
+            // guna2Elipse1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Corbel", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(12, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 47);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Chức năng quản lý";
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
             // 
-            // guna2Button2
+            // roomManager1
             // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(357, 27);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(150, 33);
-            this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "guna2Button2";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(528, 27);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(180, 33);
-            this.guna2Button3.TabIndex = 2;
-            this.guna2Button3.Text = "guna2Button3";
+            this.roomManager1.BackColor = System.Drawing.Color.Silver;
+            this.roomManager1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.roomManager1.Location = new System.Drawing.Point(-1, -1);
+            this.roomManager1.Name = "roomManager1";
+            this.roomManager1.Size = new System.Drawing.Size(1043, 447);
+            this.roomManager1.TabIndex = 0;
             // 
             // Manager_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(883, 559);
+            this.ClientSize = new System.Drawing.Size(1070, 553);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btExitManager);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Manager_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager_Form";
+            this.Load += new System.EventHandler(this.Manager_Form_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btExitManager;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.Label lbNotice;
+        private Guna.UI2.WinForms.Guna2Button btView;
+        private Guna.UI2.WinForms.Guna2Button btManage;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private _controllManager.RoomManager roomManager1;
     }
 }

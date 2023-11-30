@@ -85,6 +85,12 @@
     <Compile Include="_Class\Receptionist.cs" />
     <Compile Include="_Class\Room.cs" />
     <Compile Include="_Class\Staff.cs" />
+    <Compile Include="_controllManager\RoomManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_controllManager\RoomManager.Designer.cs">
+      <DependentUpon>RoomManager.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +109,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="_controllManager\RoomManager.resx">
+      <DependentUpon>RoomManager.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
