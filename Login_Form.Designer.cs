@@ -89,11 +89,11 @@
             this.lbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lbStatus.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.ForeColor = System.Drawing.Color.Red;
-            this.lbStatus.Location = new System.Drawing.Point(669, 342);
+            this.lbStatus.Location = new System.Drawing.Point(656, 342);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(356, 24);
+            this.lbStatus.Size = new System.Drawing.Size(391, 24);
             this.lbStatus.TabIndex = 5;
-            this.lbStatus.Text = "Tài khoản hoặc mật khẩu hoặc chức năng sai";
+            this.lbStatus.Text = "The account, password, or function is incorrect";
             this.lbStatus.Visible = false;
             // 
             // btEnter
@@ -107,12 +107,12 @@
             this.btEnter.FillColor = System.Drawing.Color.Cyan;
             this.btEnter.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEnter.ForeColor = System.Drawing.Color.White;
-            this.btEnter.Location = new System.Drawing.Point(865, 382);
+            this.btEnter.Location = new System.Drawing.Point(942, 382);
             this.btEnter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btEnter.Name = "btEnter";
-            this.btEnter.Size = new System.Drawing.Size(195, 46);
+            this.btEnter.Size = new System.Drawing.Size(118, 46);
             this.btEnter.TabIndex = 4;
-            this.btEnter.Text = "Đăng Nhập";
+            this.btEnter.Text = "Login";
             this.btEnter.Click += new System.EventHandler(this.btEnter_Click);
             // 
             // txtPass
@@ -135,7 +135,7 @@
             this.txtPass.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.PlaceholderText = "Mật Khẩu";
+            this.txtPass.PlaceholderText = "Password";
             this.txtPass.SelectedText = "";
             this.txtPass.Size = new System.Drawing.Size(415, 66);
             this.txtPass.TabIndex = 3;
@@ -160,7 +160,7 @@
             this.txtUser.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '\0';
-            this.txtUser.PlaceholderText = "Tài Khoản";
+            this.txtUser.PlaceholderText = "Username";
             this.txtUser.SelectedText = "";
             this.txtUser.Size = new System.Drawing.Size(415, 66);
             this.txtUser.TabIndex = 3;
@@ -170,11 +170,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(783, 65);
+            this.label1.Location = new System.Drawing.Point(774, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 41);
+            this.label1.Size = new System.Drawing.Size(218, 41);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Đăng nhập";
+            this.label1.Text = "Login Account";
             // 
             // guna2PictureBox1
             // 

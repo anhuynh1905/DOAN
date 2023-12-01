@@ -37,14 +37,14 @@ namespace DOAN._controllManager
                 Int64 price = Convert.ToInt64(txtPriceRoom.Text);
 
                 querry = "insert into rooms (roomNo, roomtype, bed, price) values('"+ idRoom + "','" + typeRoom + "','" + typeBed + "', " + price + ")";
-                fn.setData(querry, "Đã thêm phòng!!!");
+                fn.setData(querry, "Add room successfully!!!");
 
                 RoomManager_Load(this, null);
                 ClearAll();
             }
             else
             {
-                MessageBox.Show("Xin vui lòng điền đầy đủ thông tin!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in all the information!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

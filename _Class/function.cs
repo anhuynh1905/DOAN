@@ -40,7 +40,7 @@ namespace DOAN._Class
             cmd.CommandText = querry;
             cmd.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show(message, "Thành Công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(message, "Successfull!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public SqlDataReader getForCombo(String querry)

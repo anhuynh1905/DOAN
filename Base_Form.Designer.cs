@@ -36,24 +36,24 @@
             // btKH
             // 
             this.btKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btKH.Location = new System.Drawing.Point(315, 71);
+            this.btKH.Location = new System.Drawing.Point(315, 81);
             this.btKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btKH.Name = "btKH";
-            this.btKH.Size = new System.Drawing.Size(179, 79);
+            this.btKH.Size = new System.Drawing.Size(142, 58);
             this.btKH.TabIndex = 4;
-            this.btKH.Text = "Khách hàng";
+            this.btKH.Text = "Guest";
             this.btKH.UseVisualStyleBackColor = true;
             this.btKH.Click += new System.EventHandler(this.btKH_Click);
             // 
             // btNVKS
             // 
             this.btNVKS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btNVKS.Location = new System.Drawing.Point(19, 71);
+            this.btNVKS.Location = new System.Drawing.Point(41, 81);
             this.btNVKS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btNVKS.Name = "btNVKS";
-            this.btNVKS.Size = new System.Drawing.Size(192, 79);
+            this.btNVKS.Size = new System.Drawing.Size(170, 58);
             this.btNVKS.TabIndex = 3;
-            this.btNVKS.Text = "Nhân viên KS";
+            this.btNVKS.Text = "Hotel Staff";
             this.btNVKS.UseVisualStyleBackColor = true;
             this.btNVKS.Click += new System.EventHandler(this.btNVKS_Click);
             // 
@@ -62,11 +62,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Fax", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Brown;
-            this.label1.Location = new System.Drawing.Point(19, 11);
+            this.label1.Location = new System.Drawing.Point(34, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(436, 38);
+            this.label1.Size = new System.Drawing.Size(433, 38);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Mời bạn chọn chức năng";
+            this.label1.Text = "Please select a function";
             // 
             // Base_Form
             // 
@@ -76,10 +76,10 @@
             this.Controls.Add(this.btKH);
             this.Controls.Add(this.btNVKS);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Base_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản Lý Khách Sạn";
+            this.Text = "Hotel Manager";
             this.ResumeLayout(false);
             this.PerformLayout();
 
