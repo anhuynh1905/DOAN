@@ -93,6 +93,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewReport_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReport_Form.Designer.cs">
+      <DependentUpon>ViewReport_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Class\Date.cs" />
     <Compile Include="_Class\function.cs" />
     <Compile Include="_Class\Guest.cs" />
@@ -125,6 +131,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewReport_Form.resx">
+      <DependentUpon>ViewReport_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_controllManager\RoomManager.resx">
       <DependentUpon>RoomManager.cs</DependentUpon>
     </EmbeddedResource>

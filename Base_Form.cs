@@ -21,6 +21,7 @@ namespace DOAN
         {
             Login_Form staff = new Login_Form();
             staff.ShowDialog();
+            this.Hide();
         }
 
         private void btKH_Click(object sender, EventArgs e)
