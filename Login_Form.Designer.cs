@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.cbPermiss = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -38,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btExit = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -246,6 +248,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2CircleButton btExit;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

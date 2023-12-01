@@ -118,7 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="eye-icon-vector-illustration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye-icon-vector-illustration.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OIP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eye-vector-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye-vector-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Annotation 2023-05-20 224459" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Annotation 2023-05-20 224459.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eye-icon-vector-23766153" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye-icon-vector-23766153.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OIP (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OIP (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -36,8 +36,8 @@
             this.btManage = new Guna.UI2.WinForms.Guna2Button();
             this.lbNotice = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.roomManager1 = new DOAN._controllManager.RoomManager();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +86,6 @@
             this.btView.Size = new System.Drawing.Size(196, 45);
             this.btView.TabIndex = 2;
             this.btView.Text = "View Reports";
-            
             // 
             // btManage
             // 
@@ -127,11 +126,6 @@
             this.panel2.Size = new System.Drawing.Size(1043, 447);
             this.panel2.TabIndex = 2;
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 30;
-            this.guna2Elipse1.TargetControl = this;
-            // 
             // roomManager1
             // 
             this.roomManager1.BackColor = System.Drawing.Color.Silver;
@@ -140,6 +134,11 @@
             this.roomManager1.Name = "roomManager1";
             this.roomManager1.Size = new System.Drawing.Size(1043, 447);
             this.roomManager1.TabIndex = 0;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // Manager_Form
             // 
