@@ -37,9 +37,6 @@ namespace DOAN
 
         private void btView_Click(object sender, EventArgs e)
         {
-            ViewReport_Form view = new ViewReport_Form();
-            view.ShowDialog();
-            this.Hide();
         }
     }
 }

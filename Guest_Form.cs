@@ -37,14 +37,23 @@ namespace DOAN
         private void Book_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection(connectionstring);
-            string command = String.Format("SELECT Id FROM Room WHERE Id = '" + "{0}" + "'", bookBox.Text);
+            conn.Open();
+            string command = String.Format("UPDATE Room SET Status='"+"Book"+"' WHERE Id='"+"{0}"+"'", bookBox.Text);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            cmd = new SqlCommand(command, conn);
+            adapter.UpdateCommand=new SqlCommand(command, conn);
+            adapter.UpdateCommand.ExecuteNonQuery();
+
+            cmd.Dispose();
+            conn.Close();
+            reload();
 
         }
         private void reload()
         {
             SqlConnection sql = new SqlConnection(connectionstring);
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string command = "SELECT * FROM Test";
+            string command = "SELECT * FROM Room";
             adapter.SelectCommand = new SqlCommand(command, sql);
             DataTable table = new DataTable();
             adapter.Fill(table);
