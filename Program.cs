@@ -16,7 +16,7 @@ namespace DOAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Base_Form());
+            Application.Run(new Guest_Form());
         }
     }
 }

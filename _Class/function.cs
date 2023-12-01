@@ -15,10 +15,10 @@ namespace DOAN._Class
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\OOP\\DOAN\\DataRoom.mdf\";Integrated Security=True";
+            con.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\test\\Database1.mdf;Integrated Security=True";
             return con;
         }
-
+        
         public DataSet getData(String querry)
         {
             SqlConnection con = getConnection();
@@ -27,9 +27,10 @@ namespace DOAN._Class
             cmd.CommandText = querry;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            da.Fill(ds);
+            //da.Fill(ds);
             return ds;
         }
+        
 
         public void setData(String querry, String message)
         {
