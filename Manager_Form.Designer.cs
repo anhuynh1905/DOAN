@@ -86,7 +86,7 @@
             this.btView.Size = new System.Drawing.Size(196, 45);
             this.btView.TabIndex = 2;
             this.btView.Text = "View Reports";
-            this.btView.Click += new System.EventHandler(this.btView_Click);
+            
             // 
             // btManage
             // 
