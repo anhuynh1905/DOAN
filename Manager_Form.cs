@@ -34,5 +34,12 @@ namespace DOAN
             roomManager1.Visible = false;
             btManage.PerformClick();
         }
+
+        private void btView_Click(object sender, EventArgs e)
+        {
+            ViewReport_Form view = new ViewReport_Form();
+            view.ShowDialog();
+            this.Hide();
+        }
     }
 }

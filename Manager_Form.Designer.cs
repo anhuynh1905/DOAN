@@ -86,6 +86,7 @@
             this.btView.Size = new System.Drawing.Size(196, 45);
             this.btView.TabIndex = 2;
             this.btView.Text = "View Reports";
+            this.btView.Click += new System.EventHandler(this.btView_Click);
             // 
             // btManage
             // 
@@ -139,7 +140,6 @@
             this.roomManager1.Name = "roomManager1";
             this.roomManager1.Size = new System.Drawing.Size(1043, 447);
             this.roomManager1.TabIndex = 0;
-            
             // 
             // Manager_Form
             // 
