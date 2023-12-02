@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,6 +37,13 @@ namespace DOAN
                 Manager_Form manager = new Manager_Form();
                 this.Hide();
                 manager.ShowDialog();
+            }
+            else if (txtUser.Text == "anhphuong" && txtPass.Text == "spkt123" && cbPermiss.Text == "Receptionist")
+            {
+                lbStatus.Visible = false;
+                Receptionist_Form recep = new Receptionist_Form();
+                this.Hide();
+                recep.ShowDialog();
             }
             else
             {
