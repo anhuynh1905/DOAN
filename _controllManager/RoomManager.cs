@@ -1,5 +1,6 @@
 ﻿using DOAN._Class;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,7 +73,7 @@ namespace DOAN._controllManager
             if (txtIDRoom.Text != "")
             {
                 String idRoom = txtIDRoom.Text;
-                querry = "DELETE FROM rooms WHERE roomid = " + idRoom + "";
+                querry = "DELETE FROM rooms WHERE roomNo = " + idRoom + "";
                 fn.setData(querry, "Data delted successfully!");
                 RoomManager_Load(this, null);
                 ClearAll();
@@ -85,29 +86,22 @@ namespace DOAN._controllManager
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            if (txtIDRoom.Text != "")
+            if (txtIDRoom.Text != "" && cbTypeRoom.Text != "" && cbTypeBed.Text != "" && txtPriceRoom.Text != "")
             {
-                if (txtPriceRoom.Text != "" && cbTypeBed.Text != "" && cbTypeRoom.Text != "")
-                {
-                    String idRoom = txtIDRoom.Text;
-                    String typeRoom = cbTypeRoom.Text;
-                    String typeBed = cbTypeBed.Text;
-                    Int64 price = Convert.ToInt64(txtPriceRoom.Text);
+                String idRoom = txtIDRoom.Text;
+                String typeRoom = cbTypeRoom.Text;
+                String typeBed = cbTypeBed.Text;
+                Int64 price = Convert.ToInt64(txtPriceRoom.Text);
 
-                    querry = "UPDATE rooms SET roomType = " + typeRoom + ", bed = " + typeBed + ", price = " + price + " WHERE roomid = " + idRoom + "";
-                    fn.setData(querry, "Update room successfully!!!");
+                querry = "update rooms set roomType = '" + typeRoom + "', bed = '" + typeBed + "', price =  " + price + " where roomNo = '" + idRoom +"'";
+                fn.setData(querry, "Data UPDATE successfully!!!");
 
-                    RoomManager_Load(this, null);
-                    ClearAll();
-                }
-                else
-                {
-                    MessageBox.Show("Please fill in all the information!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                RoomManager_Load(this, null);
+                ClearAll();
             }
             else
             {
-                MessageBox.Show("Please fill in the information IDRoom!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in all the information want to UPDATE!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
