@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,7 @@ namespace DOAN._controllManager
         {
             querry = "select * from rooms";
             DataSet ds = fn.getData(querry);
-            guna2DataGridView1.DataSource = ds.Tables[0];
+            dataRoomManage.DataSource = ds.Tables[0];
         }
 
         private void btAdd_Click(object sender, EventArgs e)
@@ -64,6 +65,22 @@ namespace DOAN._controllManager
         private void RoomManager_Enter(object sender, EventArgs e)
         {
             RoomManager_Load(this, null);
+        }
+
+        private void btRemove_Click(object sender, EventArgs e)
+        {
+            if (txtIDRoom.Text != "")
+            {
+                String idRoom = txtIDRoom.Text;
+                querry = "DELETE FROM rooms WHERE roomid = " + idRoom + "";
+                fn.setData(querry, "Data delted successfully!");
+                RoomManager_Load(this, null);
+                ClearAll();
+            }
+            else
+            {
+                MessageBox.Show("Please fill in the information IDRoom!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
