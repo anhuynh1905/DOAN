@@ -82,5 +82,33 @@ namespace DOAN._controllManager
                 MessageBox.Show("Please fill in the information IDRoom!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            if (txtIDRoom.Text != "")
+            {
+                if (txtPriceRoom.Text != "" && cbTypeBed.Text != "" && cbTypeRoom.Text != "")
+                {
+                    String idRoom = txtIDRoom.Text;
+                    String typeRoom = cbTypeRoom.Text;
+                    String typeBed = cbTypeBed.Text;
+                    Int64 price = Convert.ToInt64(txtPriceRoom.Text);
+
+                    querry = "UPDATE rooms SET roomType = " + typeRoom + ", bed = " + typeBed + ", price = " + price + " WHERE roomid = " + idRoom + "";
+                    fn.setData(querry, "Update room successfully!!!");
+
+                    RoomManager_Load(this, null);
+                    ClearAll();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill in all the information!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill in the information IDRoom!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

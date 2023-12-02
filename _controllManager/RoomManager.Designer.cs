@@ -219,6 +219,7 @@
             this.btUpdate.Size = new System.Drawing.Size(101, 45);
             this.btUpdate.TabIndex = 7;
             this.btUpdate.Text = "Update";
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // btAdd
             // 
