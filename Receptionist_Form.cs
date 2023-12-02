@@ -21,5 +21,16 @@ namespace DOAN
         {
             Application.Exit();
         }
+
+        private void btCheckout_Click(object sender, EventArgs e)
+        {
+            checkOut1.Visible = true;
+            checkOut1.BringToFront();
+        }
+
+        private void Receptionist_Form_Load(object sender, EventArgs e)
+        {
+            checkOut1.Visible = false;
+        }
     }
 }

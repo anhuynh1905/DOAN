@@ -112,6 +112,12 @@
     <Compile Include="_Class\Receptionist.cs" />
     <Compile Include="_Class\Room.cs" />
     <Compile Include="_Class\Staff.cs" />
+    <Compile Include="_controllManager\CheckOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_controllManager\CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="_controllManager\RoomManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </Compile>
     <EmbeddedResource Include="Receptionist_Form.resx">
       <DependentUpon>Receptionist_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_controllManager\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_controllManager\RoomManager.resx">
       <DependentUpon>RoomManager.cs</DependentUpon>

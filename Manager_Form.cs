@@ -32,7 +32,6 @@ namespace DOAN
         private void Manager_Form_Load(object sender, EventArgs e)
         {
             roomManager1.Visible = false;
-            btManage.PerformClick();
         }
     }
 }
