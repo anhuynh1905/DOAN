@@ -102,7 +102,8 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataCheckOut.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataCheckOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCheckOut.ColumnHeadersHeight = 4;
+            this.dataCheckOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -112,7 +113,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataCheckOut.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataCheckOut.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataCheckOut.Location = new System.Drawing.Point(3, 139);
+            this.dataCheckOut.Location = new System.Drawing.Point(6, 123);
             this.dataCheckOut.Name = "dataCheckOut";
             this.dataCheckOut.RowHeadersVisible = false;
             this.dataCheckOut.RowHeadersWidth = 51;
@@ -130,7 +131,7 @@
             this.dataCheckOut.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataCheckOut.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dataCheckOut.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataCheckOut.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCheckOut.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataCheckOut.ThemeStyle.HeaderStyle.Height = 4;
             this.dataCheckOut.ThemeStyle.ReadOnly = false;
             this.dataCheckOut.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;

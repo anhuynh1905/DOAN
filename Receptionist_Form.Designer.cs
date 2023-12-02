@@ -34,9 +34,11 @@
             this.btCheckout = new Guna.UI2.WinForms.Guna2Button();
             this.btCheckin = new Guna.UI2.WinForms.Guna2Button();
             this.lbNoticeRecep = new System.Windows.Forms.Label();
-            this.btExitRecep = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.checkOut1 = new DOAN._controllManager.CheckOut();
+            this.btExitRecep = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.checkIn1 = new DOAN._controllManager.CheckIn();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +86,7 @@
             this.btCheckin.Size = new System.Drawing.Size(148, 45);
             this.btCheckin.TabIndex = 1;
             this.btCheckin.Text = "CheckIn";
+            this.btCheckin.Click += new System.EventHandler(this.btCheckin_Click);
             // 
             // lbNoticeRecep
             // 
@@ -96,6 +99,19 @@
             this.lbNoticeRecep.Size = new System.Drawing.Size(385, 47);
             this.lbNoticeRecep.TabIndex = 0;
             this.lbNoticeRecep.Text = "Receptionist Functions";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // checkOut1
+            // 
+            this.checkOut1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.checkOut1.Location = new System.Drawing.Point(12, 119);
+            this.checkOut1.Name = "checkOut1";
+            this.checkOut1.Size = new System.Drawing.Size(1043, 436);
+            this.checkOut1.TabIndex = 3;
             // 
             // btExitRecep
             // 
@@ -115,18 +131,18 @@
             this.btExitRecep.TabIndex = 1;
             this.btExitRecep.Click += new System.EventHandler(this.btExitRecep_Click);
             // 
-            // guna2Elipse1
+            // guna2Elipse2
             // 
-            this.guna2Elipse1.BorderRadius = 30;
-            this.guna2Elipse1.TargetControl = this;
+            this.guna2Elipse2.BorderRadius = 30;
+            this.guna2Elipse2.TargetControl = this;
             // 
-            // checkOut1
+            // checkIn1
             // 
-            this.checkOut1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.checkOut1.Location = new System.Drawing.Point(12, 119);
-            this.checkOut1.Name = "checkOut1";
-            this.checkOut1.Size = new System.Drawing.Size(1043, 436);
-            this.checkOut1.TabIndex = 3;
+            this.checkIn1.BackColor = System.Drawing.Color.LightGray;
+            this.checkIn1.Location = new System.Drawing.Point(13, 119);
+            this.checkIn1.Name = "checkIn1";
+            this.checkIn1.Size = new System.Drawing.Size(1043, 436);
+            this.checkIn1.TabIndex = 4;
             // 
             // Receptionist_Form
             // 
@@ -134,6 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1068, 567);
+            this.Controls.Add(this.checkIn1);
             this.Controls.Add(this.checkOut1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btExitRecep);
@@ -157,5 +174,7 @@
         private System.Windows.Forms.Label lbNoticeRecep;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private _controllManager.CheckOut checkOut1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private _controllManager.CheckIn checkIn1;
     }
 }

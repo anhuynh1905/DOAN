@@ -31,6 +31,13 @@ namespace DOAN
         private void Receptionist_Form_Load(object sender, EventArgs e)
         {
             checkOut1.Visible = false;
+            checkIn1.Visible = false;
+        }
+
+        private void btCheckin_Click(object sender, EventArgs e)
+        {
+            checkIn1.Visible = true;
+            checkIn1.BringToFront();
         }
     }
 }

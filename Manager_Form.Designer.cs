@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Form));
-            this.btExitManager = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btView = new Guna.UI2.WinForms.Guna2Button();
             this.btManage = new Guna.UI2.WinForms.Guna2Button();
@@ -38,27 +37,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.roomManager1 = new DOAN._controllManager.RoomManager();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btExitManager = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.viewReport1 = new DOAN._controllManager.ViewReport();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btExitManager
-            // 
-            this.btExitManager.BorderRadius = 18;
-            this.btExitManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btExitManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btExitManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btExitManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btExitManager.FillColor = System.Drawing.Color.Silver;
-            this.btExitManager.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btExitManager.ForeColor = System.Drawing.Color.White;
-            this.btExitManager.Image = ((System.Drawing.Image)(resources.GetObject("btExitManager.Image")));
-            this.btExitManager.ImageSize = new System.Drawing.Size(30, 30);
-            this.btExitManager.Location = new System.Drawing.Point(12, 12);
-            this.btExitManager.Name = "btExitManager";
-            this.btExitManager.Size = new System.Drawing.Size(40, 40);
-            this.btExitManager.TabIndex = 0;
-            this.btExitManager.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // panel1
             // 
@@ -86,6 +70,7 @@
             this.btView.Size = new System.Drawing.Size(196, 45);
             this.btView.TabIndex = 2;
             this.btView.Text = "View Reports";
+            this.btView.Click += new System.EventHandler(this.btView_Click);
             // 
             // btManage
             // 
@@ -120,6 +105,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.viewReport1);
             this.panel2.Controls.Add(this.roomManager1);
             this.panel2.Location = new System.Drawing.Point(9, 94);
             this.panel2.Name = "panel2";
@@ -128,7 +114,7 @@
             // 
             // roomManager1
             // 
-            this.roomManager1.BackColor = System.Drawing.Color.Silver;
+            this.roomManager1.BackColor = System.Drawing.Color.LightGray;
             this.roomManager1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.roomManager1.Location = new System.Drawing.Point(-1, -1);
             this.roomManager1.Name = "roomManager1";
@@ -139,6 +125,37 @@
             // 
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // btExitManager
+            // 
+            this.btExitManager.BorderRadius = 18;
+            this.btExitManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btExitManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btExitManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btExitManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btExitManager.FillColor = System.Drawing.Color.Silver;
+            this.btExitManager.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btExitManager.ForeColor = System.Drawing.Color.White;
+            this.btExitManager.Image = ((System.Drawing.Image)(resources.GetObject("btExitManager.Image")));
+            this.btExitManager.ImageSize = new System.Drawing.Size(30, 30);
+            this.btExitManager.Location = new System.Drawing.Point(12, 12);
+            this.btExitManager.Name = "btExitManager";
+            this.btExitManager.Size = new System.Drawing.Size(40, 40);
+            this.btExitManager.TabIndex = 0;
+            this.btExitManager.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 30;
+            this.guna2Elipse2.TargetControl = this;
+            // 
+            // viewReport1
+            // 
+            this.viewReport1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.viewReport1.Location = new System.Drawing.Point(-1, -1);
+            this.viewReport1.Name = "viewReport1";
+            this.viewReport1.Size = new System.Drawing.Size(1043, 436);
+            this.viewReport1.TabIndex = 1;
             // 
             // Manager_Form
             // 
@@ -171,5 +188,7 @@
         private Guna.UI2.WinForms.Guna2Button btManage;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private _controllManager.RoomManager roomManager1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private _controllManager.ViewReport viewReport1;
     }
 }
