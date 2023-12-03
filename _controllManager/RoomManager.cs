@@ -38,7 +38,7 @@ namespace DOAN._controllManager
                 String typeBed = cbTypeBed.Text;
                 Int64 price = Convert.ToInt64(txtPriceRoom.Text);
 
-                querry = "insert into rooms (roomNo, roomtype, bed, price) values('"+ idRoom + "','" + typeRoom + "','" + typeBed + "', " + price + ")";
+                querry = "insert into rooms (roomNo, roomtype, bed, price) values('" + idRoom + "','" + typeRoom + "','" + typeBed + "', " + price + ")";
                 fn.setData(querry, "Add room successfully!!!");
 
                 RoomManager_Load(this, null);
