@@ -117,7 +117,7 @@
             this.txtFNcin.PasswordChar = '\0';
             this.txtFNcin.PlaceholderText = "Enter FirstName";
             this.txtFNcin.SelectedText = "";
-            this.txtFNcin.Size = new System.Drawing.Size(233, 36);
+            this.txtFNcin.Size = new System.Drawing.Size(254, 36);
             this.txtFNcin.TabIndex = 4;
             // 
             // txtLNcin
@@ -137,7 +137,7 @@
             this.txtLNcin.PasswordChar = '\0';
             this.txtLNcin.PlaceholderText = "Enter LastName";
             this.txtLNcin.SelectedText = "";
-            this.txtLNcin.Size = new System.Drawing.Size(233, 36);
+            this.txtLNcin.Size = new System.Drawing.Size(254, 36);
             this.txtLNcin.TabIndex = 4;
             // 
             // txtPNcin
@@ -157,7 +157,7 @@
             this.txtPNcin.PasswordChar = '\0';
             this.txtPNcin.PlaceholderText = "Enter PhoneNO";
             this.txtPNcin.SelectedText = "";
-            this.txtPNcin.Size = new System.Drawing.Size(233, 36);
+            this.txtPNcin.Size = new System.Drawing.Size(254, 36);
             this.txtPNcin.TabIndex = 4;
             // 
             // timeCheckIn
@@ -169,7 +169,7 @@
             this.timeCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.timeCheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.timeCheckIn.Name = "timeCheckIn";
-            this.timeCheckIn.Size = new System.Drawing.Size(233, 36);
+            this.timeCheckIn.Size = new System.Drawing.Size(254, 36);
             this.timeCheckIn.TabIndex = 5;
             this.timeCheckIn.Value = new System.DateTime(2023, 12, 2, 16, 17, 17, 509);
             // 

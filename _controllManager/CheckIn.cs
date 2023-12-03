@@ -49,7 +49,7 @@ namespace DOAN._controllManager
         private void cbTRcin_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbIDcin.Items.Clear();
-            querry = "select roomNo from rooms where bed = '" + cbTBcin.Text + "' and roomType = '" + cbTRcin.Text +"' and booked = 'NO'";
+            querry = "select roomNo from rooms where bed = '" + cbTBcin.Text + "' and roomType = '" + cbTRcin.Text + "' and booked = 'NO'";
             setComboBox(querry, cbIDcin);
         }
         int rid;
