@@ -37,7 +37,7 @@
             this.txtFNcin = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtLNcin = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPNcin = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.timeCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btConfirmCIN = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lbIDRCI = new System.Windows.Forms.Label();
@@ -160,18 +160,18 @@
             this.txtPNcin.Size = new System.Drawing.Size(233, 36);
             this.txtPNcin.TabIndex = 4;
             // 
-            // guna2DateTimePicker1
+            // timeCheckIn
             // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(96, 343);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(233, 36);
-            this.guna2DateTimePicker1.TabIndex = 5;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 12, 2, 16, 17, 17, 509);
+            this.timeCheckIn.Checked = true;
+            this.timeCheckIn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.timeCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.timeCheckIn.Location = new System.Drawing.Point(96, 343);
+            this.timeCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeCheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeCheckIn.Name = "timeCheckIn";
+            this.timeCheckIn.Size = new System.Drawing.Size(233, 36);
+            this.timeCheckIn.TabIndex = 5;
+            this.timeCheckIn.Value = new System.DateTime(2023, 12, 2, 16, 17, 17, 509);
             // 
             // btConfirmCIN
             // 
@@ -188,6 +188,7 @@
             this.btConfirmCIN.Size = new System.Drawing.Size(162, 45);
             this.btConfirmCIN.TabIndex = 7;
             this.btConfirmCIN.Text = "Check_In";
+            this.btConfirmCIN.Click += new System.EventHandler(this.btConfirmCIN_Click);
             // 
             // guna2Elipse1
             // 
@@ -237,8 +238,8 @@
             this.cbTRcin.Location = new System.Drawing.Point(533, 178);
             this.cbTRcin.Name = "cbTRcin";
             this.cbTRcin.Size = new System.Drawing.Size(233, 36);
-            this.cbTRcin.StartIndex = 0;
             this.cbTRcin.TabIndex = 8;
+            this.cbTRcin.SelectedIndexChanged += new System.EventHandler(this.cbTRcin_SelectedIndexChanged);
             // 
             // cbTBcin
             // 
@@ -253,8 +254,8 @@
             this.cbTBcin.Location = new System.Drawing.Point(533, 102);
             this.cbTBcin.Name = "cbTBcin";
             this.cbTBcin.Size = new System.Drawing.Size(233, 36);
-            this.cbTBcin.StartIndex = 0;
             this.cbTBcin.TabIndex = 9;
+            this.cbTBcin.SelectedIndexChanged += new System.EventHandler(this.cbTBcin_SelectedIndexChanged);
             // 
             // cbIDcin
             // 
@@ -269,8 +270,8 @@
             this.cbIDcin.Location = new System.Drawing.Point(533, 257);
             this.cbIDcin.Name = "cbIDcin";
             this.cbIDcin.Size = new System.Drawing.Size(233, 36);
-            this.cbIDcin.StartIndex = 0;
             this.cbIDcin.TabIndex = 8;
+            this.cbIDcin.SelectedIndexChanged += new System.EventHandler(this.cbIDcin_SelectedIndexChanged);
             // 
             // lbPcin
             // 
@@ -312,7 +313,7 @@
             this.Controls.Add(this.cbIDcin);
             this.Controls.Add(this.cbTRcin);
             this.Controls.Add(this.btConfirmCIN);
-            this.Controls.Add(this.guna2DateTimePicker1);
+            this.Controls.Add(this.timeCheckIn);
             this.Controls.Add(this.txtPcin);
             this.Controls.Add(this.txtPNcin);
             this.Controls.Add(this.txtLNcin);
@@ -328,6 +329,7 @@
             this.Controls.Add(this.lbCheckin);
             this.Name = "CheckIn";
             this.Size = new System.Drawing.Size(1043, 436);
+            this.Load += new System.EventHandler(this.CheckIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,7 +345,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtFNcin;
         private Guna.UI2.WinForms.Guna2TextBox txtLNcin;
         private Guna.UI2.WinForms.Guna2TextBox txtPNcin;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeCheckIn;
         private Guna.UI2.WinForms.Guna2Button btConfirmCIN;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ComboBox cbTBcin;
