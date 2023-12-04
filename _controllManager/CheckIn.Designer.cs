@@ -44,7 +44,7 @@
             this.lbTRCI = new System.Windows.Forms.Label();
             this.lbTBCI = new System.Windows.Forms.Label();
             this.cbTRcin = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbTBcin = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbIDcin = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lbPcin = new System.Windows.Forms.Label();
             this.txtPcin = new Guna.UI2.WinForms.Guna2TextBox();
@@ -221,9 +221,9 @@
             this.lbTBCI.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbTBCI.Location = new System.Drawing.Point(529, 75);
             this.lbTBCI.Name = "lbTBCI";
-            this.lbTBCI.Size = new System.Drawing.Size(81, 23);
+            this.lbTBCI.Size = new System.Drawing.Size(106, 23);
             this.lbTBCI.TabIndex = 3;
-            this.lbTBCI.Text = "Type Bed";
+            this.lbTBCI.Text = "Room Status";
             // 
             // cbTRcin
             // 
@@ -235,27 +235,33 @@
             this.cbTRcin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.cbTRcin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbTRcin.ItemHeight = 30;
+            this.cbTRcin.Items.AddRange(new object[] {
+            "Hotel",
+            "Villa"});
             this.cbTRcin.Location = new System.Drawing.Point(533, 178);
             this.cbTRcin.Name = "cbTRcin";
             this.cbTRcin.Size = new System.Drawing.Size(233, 36);
             this.cbTRcin.TabIndex = 8;
             this.cbTRcin.SelectedIndexChanged += new System.EventHandler(this.cbTRcin_SelectedIndexChanged);
             // 
-            // cbTBcin
+            // cbStatus
             // 
-            this.cbTBcin.BackColor = System.Drawing.Color.Transparent;
-            this.cbTBcin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbTBcin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTBcin.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTBcin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTBcin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            this.cbTBcin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbTBcin.ItemHeight = 30;
-            this.cbTBcin.Location = new System.Drawing.Point(533, 102);
-            this.cbTBcin.Name = "cbTBcin";
-            this.cbTBcin.Size = new System.Drawing.Size(233, 36);
-            this.cbTBcin.TabIndex = 9;
-            this.cbTBcin.SelectedIndexChanged += new System.EventHandler(this.cbTBcin_SelectedIndexChanged);
+            this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.Items.AddRange(new object[] {
+            "YES",
+            "NO"});
+            this.cbStatus.Location = new System.Drawing.Point(533, 102);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(233, 36);
+            this.cbStatus.TabIndex = 9;
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
             // 
             // cbIDcin
             // 
@@ -309,7 +315,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.Controls.Add(this.cbTBcin);
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.cbIDcin);
             this.Controls.Add(this.cbTRcin);
             this.Controls.Add(this.btConfirmCIN);
@@ -348,7 +354,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker timeCheckIn;
         private Guna.UI2.WinForms.Guna2Button btConfirmCIN;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2ComboBox cbTBcin;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
         private Guna.UI2.WinForms.Guna2ComboBox cbTRcin;
         private System.Windows.Forms.Label lbTBCI;
         private System.Windows.Forms.Label lbTRCI;

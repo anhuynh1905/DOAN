@@ -71,10 +71,11 @@ namespace DOAN
             this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(12, 12);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(16, 15);
+            this.guna2ImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(35, 21);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(47, 26);
             this.guna2ImageButton1.TabIndex = 0;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
@@ -82,9 +83,10 @@ namespace DOAN
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold);
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(366, 6);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(488, 7);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(300, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(356, 33);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Hotel Room Booking Menu";
             // 
@@ -97,9 +99,10 @@ namespace DOAN
             this.BookBtn.FillColor = System.Drawing.Color.DarkGoldenrod;
             this.BookBtn.Font = new System.Drawing.Font("Modern No. 20", 12F);
             this.BookBtn.ForeColor = System.Drawing.Color.White;
-            this.BookBtn.Location = new System.Drawing.Point(871, 88);
+            this.BookBtn.Location = new System.Drawing.Point(1161, 108);
+            this.BookBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BookBtn.Name = "BookBtn";
-            this.BookBtn.Size = new System.Drawing.Size(65, 36);
+            this.BookBtn.Size = new System.Drawing.Size(87, 44);
             this.BookBtn.TabIndex = 4;
             this.BookBtn.Text = "Book";
             this.BookBtn.Click += new System.EventHandler(this.Book_Click);
@@ -108,9 +111,10 @@ namespace DOAN
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(636, 133);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(848, 164);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(68, 20);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(82, 24);
             this.guna2HtmlLabel2.TabIndex = 6;
             this.guna2HtmlLabel2.Text = "Check in";
             // 
@@ -118,9 +122,10 @@ namespace DOAN
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(636, 62);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(848, 76);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(75, 20);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(91, 24);
             this.guna2HtmlLabel3.TabIndex = 7;
             this.guna2HtmlLabel3.Text = "Check out";
             // 
@@ -145,11 +150,12 @@ namespace DOAN
             this.CheckOut.FillColor = System.Drawing.Color.White;
             this.CheckOut.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.CheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.CheckOut.Location = new System.Drawing.Point(636, 88);
+            this.CheckOut.Location = new System.Drawing.Point(848, 108);
+            this.CheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.CheckOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.CheckOut.Name = "CheckOut";
-            this.CheckOut.Size = new System.Drawing.Size(203, 36);
+            this.CheckOut.Size = new System.Drawing.Size(271, 44);
             this.CheckOut.TabIndex = 10;
             this.CheckOut.Value = new System.DateTime(2023, 12, 4, 14, 0, 24, 409);
             // 
@@ -178,21 +184,23 @@ namespace DOAN
             this.fNameBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fNameBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.fNameBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.fNameBox.Location = new System.Drawing.Point(636, 236);
+            this.fNameBox.Location = new System.Drawing.Point(848, 290);
+            this.fNameBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fNameBox.Name = "fNameBox";
             this.fNameBox.PasswordChar = '\0';
             this.fNameBox.PlaceholderText = "";
             this.fNameBox.SelectedText = "";
-            this.fNameBox.Size = new System.Drawing.Size(203, 32);
+            this.fNameBox.Size = new System.Drawing.Size(271, 39);
             this.fNameBox.TabIndex = 11;
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(636, 210);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(848, 258);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(86, 20);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(103, 24);
             this.guna2HtmlLabel4.TabIndex = 12;
             this.guna2HtmlLabel4.Text = "First Name";
             // 
@@ -200,9 +208,10 @@ namespace DOAN
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(636, 279);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(848, 343);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(82, 20);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(99, 24);
             this.guna2HtmlLabel5.TabIndex = 14;
             this.guna2HtmlLabel5.Text = "Last Name";
             // 
@@ -217,21 +226,23 @@ namespace DOAN
             this.lNameBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lNameBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lNameBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lNameBox.Location = new System.Drawing.Point(636, 305);
+            this.lNameBox.Location = new System.Drawing.Point(848, 375);
+            this.lNameBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lNameBox.Name = "lNameBox";
             this.lNameBox.PasswordChar = '\0';
             this.lNameBox.PlaceholderText = "";
             this.lNameBox.SelectedText = "";
-            this.lNameBox.Size = new System.Drawing.Size(203, 32);
+            this.lNameBox.Size = new System.Drawing.Size(271, 39);
             this.lNameBox.TabIndex = 13;
             // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(636, 349);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(848, 430);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(44, 20);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(54, 24);
             this.guna2HtmlLabel6.TabIndex = 16;
             this.guna2HtmlLabel6.Text = "Room ";
             // 
@@ -246,12 +257,13 @@ namespace DOAN
             this.RoomBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RoomBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.RoomBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.RoomBox.Location = new System.Drawing.Point(636, 375);
+            this.RoomBox.Location = new System.Drawing.Point(848, 462);
+            this.RoomBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RoomBox.Name = "RoomBox";
             this.RoomBox.PasswordChar = '\0';
             this.RoomBox.PlaceholderText = "";
             this.RoomBox.SelectedText = "";
-            this.RoomBox.Size = new System.Drawing.Size(203, 32);
+            this.RoomBox.Size = new System.Drawing.Size(271, 39);
             this.RoomBox.TabIndex = 15;
             // 
             // CheckIn
@@ -261,20 +273,21 @@ namespace DOAN
             this.CheckIn.FillColor = System.Drawing.Color.White;
             this.CheckIn.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.CheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.CheckIn.Location = new System.Drawing.Point(636, 159);
+            this.CheckIn.Location = new System.Drawing.Point(848, 196);
+            this.CheckIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.CheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.CheckIn.Name = "CheckIn";
-            this.CheckIn.Size = new System.Drawing.Size(203, 36);
+            this.CheckIn.Size = new System.Drawing.Size(271, 44);
             this.CheckIn.TabIndex = 17;
             this.CheckIn.Value = new System.DateTime(2023, 12, 4, 14, 0, 24, 409);
             // 
             // Guest_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(948, 655);
+            this.ClientSize = new System.Drawing.Size(1264, 806);
             this.Controls.Add(this.CheckIn);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.RoomBox);
@@ -289,7 +302,9 @@ namespace DOAN
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2ImageButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Guest_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guest_Form";
             this.Load += new System.EventHandler(this.Guest_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();

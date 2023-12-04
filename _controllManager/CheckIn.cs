@@ -39,27 +39,18 @@ namespace DOAN._controllManager
 
         }
 
-        private void cbTBcin_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cbTRcin.SelectedIndex = -1;
-            cbIDcin.Items.Clear();
-            txtPcin.Clear();
-        }
-
         private void cbTRcin_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbIDcin.Items.Clear();
-            querry = "select roomNo from rooms where bed = '" + cbTBcin.Text + "' and roomType = '" + cbTRcin.Text + "' and booked = 'NO'";
+            querry = "select Room ID from Room_Info where Room Status = 'NO' and Room Type = '" + cbTRcin.Text + "' and Room Status = '" + cbStatus + "'";
             setComboBox(querry, cbIDcin);
         }
         int rid;
         private void cbIDcin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            querry = "select price, roomid from rooms where roomNo = '" + cbIDcin.Text + "'";
+            querry = "select Room Price from Room_Info where Room ID = '" + cbIDcin.Text + "'";
             DataSet ds = fn.getData(querry);
             txtPcin.Text = ds.Tables[0].Rows[0][0].ToString();
-            rid = int.Parse(ds.Tables[0].Rows[0][1].ToString());
-
         }
 
         private void btConfirmCIN_Click(object sender, EventArgs e)
@@ -71,7 +62,7 @@ namespace DOAN._controllManager
                 Int64 mobile = Int64.Parse(txtPNcin.Text);
                 String timeCI = timeCheckIn.Text;
 
-                querry = "insert into customer (cfname, clname, mobile, checkin, roomid) values ('" + firstname + "', '" + lastname + "', " + mobile + ", '" + timeCI +"', " + rid + ") update rooms set booked = 'YES' where roomNo = '" + cbIDcin.Text + "'";
+                querry = "insert into Room_Info (FirstName, LastName, PhoneNumber, CheckIn) values ('" + firstname + "', '" + lastname + "', " + mobile + ", '" + timeCI +"') update Room_Info Room Status = 'YES' where Room ID = '" + cbIDcin.Text + "'";
                 fn.setData(querry, "Check_In successfully!");
                 ClearAll();
             }
@@ -87,7 +78,13 @@ namespace DOAN._controllManager
             txtLNcin.Clear();
             txtPNcin.Clear();
             timeCheckIn.ResetText();
-            cbTBcin.SelectedIndex = -1;
+            cbStatus.SelectedIndex = -1;
+            cbTRcin.SelectedIndex = -1;
+            cbIDcin.Items.Clear();
+            txtPcin.Clear();
+        }
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
             cbTRcin.SelectedIndex = -1;
             cbIDcin.Items.Clear();
             txtPcin.Clear();
