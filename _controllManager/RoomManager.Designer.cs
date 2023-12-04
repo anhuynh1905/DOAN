@@ -44,6 +44,8 @@
             this.btAdd = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dataRoomManage = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.lbTypeBed = new System.Windows.Forms.Label();
+            this.cbTypeBed = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataRoomManage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.lbIDRoom.AutoSize = true;
             this.lbIDRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbIDRoom.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIDRoom.Location = new System.Drawing.Point(708, 52);
+            this.lbIDRoom.Location = new System.Drawing.Point(708, 44);
             this.lbIDRoom.Name = "lbIDRoom";
             this.lbIDRoom.Size = new System.Drawing.Size(80, 24);
             this.lbIDRoom.TabIndex = 2;
@@ -74,7 +76,7 @@
             this.lbTypeRoom.AutoSize = true;
             this.lbTypeRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbTypeRoom.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTypeRoom.Location = new System.Drawing.Point(708, 158);
+            this.lbTypeRoom.Location = new System.Drawing.Point(708, 213);
             this.lbTypeRoom.Name = "lbTypeRoom";
             this.lbTypeRoom.Size = new System.Drawing.Size(99, 24);
             this.lbTypeRoom.TabIndex = 3;
@@ -92,7 +94,7 @@
             this.txtIDRoom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIDRoom.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtIDRoom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIDRoom.Location = new System.Drawing.Point(712, 81);
+            this.txtIDRoom.Location = new System.Drawing.Point(712, 73);
             this.txtIDRoom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIDRoom.Name = "txtIDRoom";
             this.txtIDRoom.PasswordChar = '\0';
@@ -115,7 +117,7 @@
             this.cbTypeRoom.Items.AddRange(new object[] {
             "Hotel",
             "Villa"});
-            this.cbTypeRoom.Location = new System.Drawing.Point(712, 185);
+            this.cbTypeRoom.Location = new System.Drawing.Point(712, 240);
             this.cbTypeRoom.Name = "cbTypeRoom";
             this.cbTypeRoom.Size = new System.Drawing.Size(260, 36);
             this.cbTypeRoom.StartIndex = 0;
@@ -126,7 +128,7 @@
             this.lbPriceRoom.AutoSize = true;
             this.lbPriceRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbPriceRoom.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPriceRoom.Location = new System.Drawing.Point(708, 258);
+            this.lbPriceRoom.Location = new System.Drawing.Point(708, 293);
             this.lbPriceRoom.Name = "lbPriceRoom";
             this.lbPriceRoom.Size = new System.Drawing.Size(50, 24);
             this.lbPriceRoom.TabIndex = 2;
@@ -144,7 +146,7 @@
             this.txtPriceRoom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPriceRoom.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPriceRoom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPriceRoom.Location = new System.Drawing.Point(712, 286);
+            this.txtPriceRoom.Location = new System.Drawing.Point(712, 321);
             this.txtPriceRoom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPriceRoom.Name = "txtPriceRoom";
             this.txtPriceRoom.PasswordChar = '\0';
@@ -163,7 +165,7 @@
             this.btRemove.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btRemove.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btRemove.ForeColor = System.Drawing.Color.Black;
-            this.btRemove.Location = new System.Drawing.Point(788, 359);
+            this.btRemove.Location = new System.Drawing.Point(785, 379);
             this.btRemove.Name = "btRemove";
             this.btRemove.Size = new System.Drawing.Size(103, 45);
             this.btRemove.TabIndex = 6;
@@ -180,7 +182,7 @@
             this.btUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btUpdate.Location = new System.Drawing.Point(657, 359);
+            this.btUpdate.Location = new System.Drawing.Point(654, 379);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(101, 45);
             this.btUpdate.TabIndex = 7;
@@ -197,7 +199,7 @@
             this.btAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btAdd.ForeColor = System.Drawing.Color.Black;
-            this.btAdd.Location = new System.Drawing.Point(921, 359);
+            this.btAdd.Location = new System.Drawing.Point(918, 379);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(100, 45);
             this.btAdd.TabIndex = 6;
@@ -262,6 +264,38 @@
             this.dataRoomManage.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataRoomManage.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // lbTypeBed
+            // 
+            this.lbTypeBed.AutoSize = true;
+            this.lbTypeBed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbTypeBed.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTypeBed.Location = new System.Drawing.Point(708, 131);
+            this.lbTypeBed.Name = "lbTypeBed";
+            this.lbTypeBed.Size = new System.Drawing.Size(86, 24);
+            this.lbTypeBed.TabIndex = 3;
+            this.lbTypeBed.Text = "Type Bed";
+            // 
+            // cbTypeBed
+            // 
+            this.cbTypeBed.BackColor = System.Drawing.Color.Transparent;
+            this.cbTypeBed.BorderRadius = 15;
+            this.cbTypeBed.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTypeBed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTypeBed.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTypeBed.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTypeBed.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.cbTypeBed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbTypeBed.ItemHeight = 30;
+            this.cbTypeBed.Items.AddRange(new object[] {
+            "Single",
+            "Double",
+            "Family"});
+            this.cbTypeBed.Location = new System.Drawing.Point(712, 158);
+            this.cbTypeBed.Name = "cbTypeBed";
+            this.cbTypeBed.Size = new System.Drawing.Size(260, 36);
+            this.cbTypeBed.StartIndex = 0;
+            this.cbTypeBed.TabIndex = 5;
+            // 
             // RoomManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -272,10 +306,12 @@
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btRemove);
+            this.Controls.Add(this.cbTypeBed);
             this.Controls.Add(this.cbTypeRoom);
             this.Controls.Add(this.txtPriceRoom);
             this.Controls.Add(this.txtIDRoom);
             this.Controls.Add(this.lbPriceRoom);
+            this.Controls.Add(this.lbTypeBed);
             this.Controls.Add(this.lbTypeRoom);
             this.Controls.Add(this.lbIDRoom);
             this.Controls.Add(this.label1);
@@ -304,5 +340,7 @@
         private Guna.UI2.WinForms.Guna2Button btAdd;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DataGridView dataRoomManage;
+        private Guna.UI2.WinForms.Guna2ComboBox cbTypeBed;
+        private System.Windows.Forms.Label lbTypeBed;
     }
 }

@@ -34,10 +34,11 @@ namespace DOAN._controllManager
             if (txtIDRoom.Text != "" && cbTypeRoom.Text != "" && txtPriceRoom.Text != "")
             {
                 String idRoom = txtIDRoom.Text;
+                String typeBed = cbTypeBed.Text;
                 String typeRoom = cbTypeRoom.Text;
                 Int64 price = Convert.ToInt64(txtPriceRoom.Text);
 
-                querry = "insert into Room_Info (Room ID, Room Type, Room Price) values('" + idRoom + "','" + typeRoom + "', " + price + ")";
+                querry = "insert into Room_Info (RoomNo, RoomType, RoomBed, RoomPrice) values('" + idRoom + "','" + typeRoom + "', '" + typeBed + "', " + price + ")";
                 fn.setData(querry, "Add room successfully!!!");
 
                 RoomManager_Load(this, null);
@@ -52,6 +53,7 @@ namespace DOAN._controllManager
         public void ClearAll()
         {
             txtIDRoom.Clear();
+            cbTypeBed.SelectedIndex = 0;
             cbTypeRoom.SelectedIndex = 0;
             txtPriceRoom.Clear();
         }
@@ -71,8 +73,8 @@ namespace DOAN._controllManager
             if (txtIDRoom.Text != "")
             {
                 String idRoom = txtIDRoom.Text;
-                querry = "DELETE FROM Room_Info WHERE Room ID = " + idRoom + "";
-                fn.setData(querry, "Data delted successfully!");
+                querry = "DELETE FROM Room_Info WHERE RoomNo = " + idRoom + "";
+                fn.setData(querry, "Data deleted successfully!");
                 RoomManager_Load(this, null);
                 ClearAll();
             }
@@ -87,10 +89,11 @@ namespace DOAN._controllManager
             if (txtIDRoom.Text != "" && cbTypeRoom.Text != "" && txtPriceRoom.Text != "")
             {
                 String idRoom = txtIDRoom.Text;
+                String typeBed = cbTypeBed.Text;
                 String typeRoom = cbTypeRoom.Text;
                 Int64 price = Convert.ToInt64(txtPriceRoom.Text);
 
-                querry = "update Room_Info set Room Type = '" + typeRoom + "', price =  " + price + " where Room ID = '" + idRoom +"'";
+                querry = "update Room_Info set RoomBed = '" + typeBed + "', RoomType = '" + typeRoom + "', RoomPrice =  " + price + " where RoomNo = '" + idRoom +"'";
                 fn.setData(querry, "Data UPDATE successfully!!!");
 
                 RoomManager_Load(this, null);
