@@ -1,4 +1,6 @@
-﻿namespace DOAN
+﻿using System.Windows.Forms;
+
+namespace DOAN
 {
     partial class Guest_Form
     {
@@ -30,29 +32,40 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Guest_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.btExit = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.room_dbDataSet = new DOAN.room_dbDataSet();
-            this.roomTableAdapter = new DOAN.room_dbDataSetTableAdapters.RoomTableAdapter();
-            this.Book = new Guna.UI2.WinForms.Guna2Button();
-            this.bookBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.fNameBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lNameBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BookBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseRoom1DataSet = new DOAN.DatabaseRoom1DataSet();
+            this.roomsTableAdapter = new DOAN.DatabaseRoom1DataSetTableAdapters.roomsTableAdapter();
+            this.CheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGribView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.roomsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseRoom1DataSet1 = new DOAN.DatabaseRoom1DataSet1();
+            this.roomsTableAdapter1 = new DOAN.DatabaseRoom1DataSet1TableAdapters.roomsTableAdapter();
+            this.fNameBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pNumberBox = new Guna.UI2.WinForms.Guna2TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.room_dbDataSet)).BeginInit();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lNameBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.RoomBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.booked = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseRoom1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGribView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseRoom1DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -61,145 +74,191 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // btExit
+            // guna2ImageButton1
             // 
-            this.btExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btExit.CustomBorderColor = System.Drawing.Color.White;
-            this.btExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btExit.FillColor = System.Drawing.Color.White;
-            this.btExit.FocusedColor = System.Drawing.Color.White;
-            this.btExit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btExit.ForeColor = System.Drawing.Color.White;
-            this.btExit.Image = ((System.Drawing.Image)(resources.GetObject("btExit.Image")));
-            this.btExit.ImageSize = new System.Drawing.Size(30, 30);
-            this.btExit.Location = new System.Drawing.Point(0, -1);
-            this.btExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btExit.Name = "btExit";
-            this.btExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btExit.Size = new System.Drawing.Size(28, 31);
-            this.btExit.TabIndex = 1;
-            this.btExit.Click += new System.EventHandler(this.btExit_Click_1);
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.Location = new System.Drawing.Point(12, 12);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(35, 21);
+            this.guna2ImageButton1.TabIndex = 0;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
-            // dataGridView
+            // guna2HtmlLabel1
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView.AutoGenerateColumns = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView.ColumnHeadersHeight = 15;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn});
-            this.dataGridView.DataSource = this.roomBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridView.Location = new System.Drawing.Point(12, 224);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersVisible = false;
-            this.dataGridView.Size = new System.Drawing.Size(776, 214);
-            this.dataGridView.TabIndex = 2;
-            this.dataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.dataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataGridView.ThemeStyle.HeaderStyle.Height = 15;
-            this.dataGridView.ThemeStyle.ReadOnly = false;
-            this.dataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.dataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridView.ThemeStyle.RowsStyle.Height = 22;
-            this.dataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(366, 6);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(300, 27);
+            this.guna2HtmlLabel1.TabIndex = 1;
+            this.guna2HtmlLabel1.Text = "Hotel Room Booking Menu";
             // 
-            // idDataGridViewTextBoxColumn
+            // BookBtn
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.BookBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BookBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BookBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BookBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BookBtn.FillColor = System.Drawing.Color.DarkGoldenrod;
+            this.BookBtn.Font = new System.Drawing.Font("Modern No. 20", 12F);
+            this.BookBtn.ForeColor = System.Drawing.Color.White;
+            this.BookBtn.Location = new System.Drawing.Point(871, 88);
+            this.BookBtn.Name = "BookBtn";
+            this.BookBtn.Size = new System.Drawing.Size(65, 36);
+            this.BookBtn.TabIndex = 4;
+            this.BookBtn.Text = "Book";
+            this.BookBtn.Click += new System.EventHandler(this.Book_Click);
             // 
-            // statusDataGridViewTextBoxColumn
+            // guna2HtmlLabel2
             // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(636, 133);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(68, 20);
+            this.guna2HtmlLabel2.TabIndex = 6;
+            this.guna2HtmlLabel2.Text = "Check in";
             // 
-            // roomBindingSource
+            // guna2HtmlLabel3
             // 
-            this.roomBindingSource.DataMember = "Room";
-            this.roomBindingSource.DataSource = this.room_dbDataSet;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(636, 62);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(75, 20);
+            this.guna2HtmlLabel3.TabIndex = 7;
+            this.guna2HtmlLabel3.Text = "Check out";
             // 
-            // room_dbDataSet
+            // roomsBindingSource
             // 
-            this.room_dbDataSet.DataSetName = "room_dbDataSet";
-            this.room_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.roomsBindingSource.DataMember = "rooms";
+            this.roomsBindingSource.DataSource = this.databaseRoom1DataSet;
             // 
-            // roomTableAdapter
+            // databaseRoom1DataSet
             // 
-            this.roomTableAdapter.ClearBeforeFill = true;
+            this.databaseRoom1DataSet.DataSetName = "DatabaseRoom1DataSet";
+            this.databaseRoom1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Book
+            // roomsTableAdapter
             // 
-            this.Book.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Book.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Book.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Book.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Book.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Book.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Book.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold);
-            this.Book.ForeColor = System.Drawing.Color.White;
-            this.Book.Location = new System.Drawing.Point(687, 167);
-            this.Book.Name = "Book";
-            this.Book.Size = new System.Drawing.Size(79, 36);
-            this.Book.TabIndex = 4;
-            this.Book.Text = "Book";
-            this.Book.Click += new System.EventHandler(this.Book_Click);
+            this.roomsTableAdapter.ClearBeforeFill = true;
             // 
-            // bookBox
+            // CheckOut
             // 
-            this.bookBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bookBox.DefaultText = "";
-            this.bookBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.bookBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.bookBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bookBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bookBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bookBox.Location = new System.Drawing.Point(190, 25);
-            this.bookBox.Name = "bookBox";
-            this.bookBox.PasswordChar = '\0';
-            this.bookBox.PlaceholderText = "";
-            this.bookBox.SelectedText = "";
-            this.bookBox.Size = new System.Drawing.Size(180, 24);
-            this.bookBox.TabIndex = 5;
+            this.CheckOut.Checked = true;
+            this.CheckOut.CustomFormat = "dd/MM/yyyy";
+            this.CheckOut.FillColor = System.Drawing.Color.White;
+            this.CheckOut.Font = new System.Drawing.Font("Modern No. 20", 10F);
+            this.CheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.CheckOut.Location = new System.Drawing.Point(636, 88);
+            this.CheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.CheckOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.CheckOut.Name = "CheckOut";
+            this.CheckOut.Size = new System.Drawing.Size(203, 36);
+            this.CheckOut.TabIndex = 10;
+            this.CheckOut.Value = new System.DateTime(2023, 12, 4, 14, 0, 24, 409);
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // bedDataGridViewTextBoxColumn
+            // 
+            this.bedDataGridViewTextBoxColumn.DataPropertyName = "bed";
+            this.bedDataGridViewTextBoxColumn.HeaderText = "bed";
+            this.bedDataGridViewTextBoxColumn.Name = "bedDataGridViewTextBoxColumn";
+            // 
+            // roomTypeDataGridViewTextBoxColumn
+            // 
+            this.roomTypeDataGridViewTextBoxColumn.DataPropertyName = "roomType";
+            this.roomTypeDataGridViewTextBoxColumn.HeaderText = "roomType";
+            this.roomTypeDataGridViewTextBoxColumn.Name = "roomTypeDataGridViewTextBoxColumn";
+            // 
+            // roomNoDataGridViewTextBoxColumn
+            // 
+            this.roomNoDataGridViewTextBoxColumn.DataPropertyName = "roomNo";
+            this.roomNoDataGridViewTextBoxColumn.HeaderText = "roomNo";
+            this.roomNoDataGridViewTextBoxColumn.Name = "roomNoDataGridViewTextBoxColumn";
+            // 
+            // DataGribView
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DataGribView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGribView.AutoGenerateColumns = false;
+            this.DataGribView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Modern No. 20", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGribView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DataGribView.ColumnHeadersHeight = 16;
+            this.DataGribView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DataGribView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.roomNoDataGridViewTextBoxColumn,
+            this.roomTypeDataGridViewTextBoxColumn,
+            this.bedDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.booked});
+            this.DataGribView.DataSource = this.roomsBindingSource1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGribView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGribView.GridColor = System.Drawing.Color.White;
+            this.DataGribView.Location = new System.Drawing.Point(12, 66);
+            this.DataGribView.Name = "DataGribView";
+            this.DataGribView.RowHeadersVisible = false;
+            this.DataGribView.Size = new System.Drawing.Size(564, 476);
+            this.DataGribView.TabIndex = 9;
+            this.DataGribView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DataGribView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DataGribView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DataGribView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DataGribView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DataGribView.ThemeStyle.BackColor = System.Drawing.Color.AliceBlue;
+            this.DataGribView.ThemeStyle.GridColor = System.Drawing.Color.White;
+            this.DataGribView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.DataGribView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DataGribView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Modern No. 20", 8.25F);
+            this.DataGribView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DataGribView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DataGribView.ThemeStyle.HeaderStyle.Height = 16;
+            this.DataGribView.ThemeStyle.ReadOnly = false;
+            this.DataGribView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DataGribView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DataGribView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.DataGribView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGribView.ThemeStyle.RowsStyle.Height = 22;
+            this.DataGribView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DataGribView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // roomsBindingSource1
+            // 
+            this.roomsBindingSource1.DataMember = "rooms";
+            this.roomsBindingSource1.DataSource = this.databaseRoom1DataSet1;
+            // 
+            // databaseRoom1DataSet1
+            // 
+            this.databaseRoom1DataSet1.DataSetName = "DatabaseRoom1DataSet1";
+            this.databaseRoom1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomsTableAdapter1
+            // 
+            this.roomsTableAdapter1.ClearBeforeFill = true;
             // 
             // fNameBox
             // 
@@ -212,13 +271,33 @@
             this.fNameBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fNameBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.fNameBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.fNameBox.Location = new System.Drawing.Point(190, 70);
+            this.fNameBox.Location = new System.Drawing.Point(636, 236);
             this.fNameBox.Name = "fNameBox";
             this.fNameBox.PasswordChar = '\0';
             this.fNameBox.PlaceholderText = "";
             this.fNameBox.SelectedText = "";
-            this.fNameBox.Size = new System.Drawing.Size(180, 24);
-            this.fNameBox.TabIndex = 6;
+            this.fNameBox.Size = new System.Drawing.Size(203, 32);
+            this.fNameBox.TabIndex = 11;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(636, 210);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(86, 20);
+            this.guna2HtmlLabel4.TabIndex = 12;
+            this.guna2HtmlLabel4.Text = "First Name";
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(636, 279);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(82, 20);
+            this.guna2HtmlLabel5.TabIndex = 14;
+            this.guna2HtmlLabel5.Text = "Last Name";
             // 
             // lNameBox
             // 
@@ -231,93 +310,93 @@
             this.lNameBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lNameBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lNameBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lNameBox.Location = new System.Drawing.Point(190, 114);
+            this.lNameBox.Location = new System.Drawing.Point(636, 305);
             this.lNameBox.Name = "lNameBox";
             this.lNameBox.PasswordChar = '\0';
             this.lNameBox.PlaceholderText = "";
             this.lNameBox.SelectedText = "";
-            this.lNameBox.Size = new System.Drawing.Size(180, 24);
-            this.lNameBox.TabIndex = 7;
-            this.lNameBox.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
+            this.lNameBox.Size = new System.Drawing.Size(203, 32);
+            this.lNameBox.TabIndex = 13;
             // 
-            // guna2HtmlLabel1
+            // guna2HtmlLabel6
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(87, 25);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(45, 15);
-            this.guna2HtmlLabel1.TabIndex = 8;
-            this.guna2HtmlLabel1.Text = "Room ID";
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(636, 349);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(44, 20);
+            this.guna2HtmlLabel6.TabIndex = 16;
+            this.guna2HtmlLabel6.Text = "Room ";
             // 
-            // guna2HtmlLabel2
+            // RoomBox
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(87, 70);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(53, 15);
-            this.guna2HtmlLabel2.TabIndex = 9;
-            this.guna2HtmlLabel2.Text = "First Name";
+            this.RoomBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.RoomBox.DefaultText = "";
+            this.RoomBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.RoomBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.RoomBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.RoomBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.RoomBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RoomBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RoomBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RoomBox.Location = new System.Drawing.Point(636, 375);
+            this.RoomBox.Name = "RoomBox";
+            this.RoomBox.PasswordChar = '\0';
+            this.RoomBox.PlaceholderText = "";
+            this.RoomBox.SelectedText = "";
+            this.RoomBox.Size = new System.Drawing.Size(203, 32);
+            this.RoomBox.TabIndex = 15;
             // 
-            // guna2HtmlLabel3
+            // CheckIn
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(87, 114);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(54, 15);
-            this.guna2HtmlLabel3.TabIndex = 10;
-            this.guna2HtmlLabel3.Text = "Last Name";
+            this.CheckIn.Checked = true;
+            this.CheckIn.CustomFormat = "dd/MM/yyyy";
+            this.CheckIn.FillColor = System.Drawing.Color.White;
+            this.CheckIn.Font = new System.Drawing.Font("Modern No. 20", 10F);
+            this.CheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.CheckIn.Location = new System.Drawing.Point(636, 159);
+            this.CheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.CheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.CheckIn.Name = "CheckIn";
+            this.CheckIn.Size = new System.Drawing.Size(203, 36);
+            this.CheckIn.TabIndex = 17;
+            this.CheckIn.Value = new System.DateTime(2023, 12, 4, 14, 0, 24, 409);
             // 
-            // guna2HtmlLabel4
+            // booked
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(87, 158);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(74, 15);
-            this.guna2HtmlLabel4.TabIndex = 12;
-            this.guna2HtmlLabel4.Text = "Phone Number";
-            // 
-            // pNumberBox
-            // 
-            this.pNumberBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pNumberBox.DefaultText = "";
-            this.pNumberBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.pNumberBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.pNumberBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.pNumberBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.pNumberBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pNumberBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.pNumberBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pNumberBox.Location = new System.Drawing.Point(190, 158);
-            this.pNumberBox.Name = "pNumberBox";
-            this.pNumberBox.PasswordChar = '\0';
-            this.pNumberBox.PlaceholderText = "";
-            this.pNumberBox.SelectedText = "";
-            this.pNumberBox.Size = new System.Drawing.Size(180, 24);
-            this.pNumberBox.TabIndex = 11;
+            this.booked.DataPropertyName = "booked";
+            this.booked.HeaderText = "booked";
+            this.booked.Name = "booked";
             // 
             // Guest_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(948, 655);
+            this.Controls.Add(this.CheckIn);
+            this.Controls.Add(this.guna2HtmlLabel6);
+            this.Controls.Add(this.RoomBox);
+            this.Controls.Add(this.guna2HtmlLabel5);
+            this.Controls.Add(this.lNameBox);
             this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.pNumberBox);
+            this.Controls.Add(this.fNameBox);
+            this.Controls.Add(this.CheckOut);
+            this.Controls.Add(this.DataGribView);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.BookBtn);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.lNameBox);
-            this.Controls.Add(this.fNameBox);
-            this.Controls.Add(this.bookBox);
-            this.Controls.Add(this.Book);
-            this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.btExit);
+            this.Controls.Add(this.guna2ImageButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Guest_Form";
-            this.Text = "Guest";
+            this.Text = "Guest_Form";
             this.Load += new System.EventHandler(this.Guest_Form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.room_dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseRoom1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGribView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseRoom1DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,21 +405,30 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2CircleButton btExit;
-        private Guna.UI2.WinForms.Guna2DataGridView dataGridView;
-        private room_dbDataSet room_dbDataSet;
-        private System.Windows.Forms.BindingSource roomBindingSource;
-        private room_dbDataSetTableAdapters.RoomTableAdapter roomTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private Guna.UI2.WinForms.Guna2Button Book;
-        private Guna.UI2.WinForms.Guna2TextBox bookBox;
-        private Guna.UI2.WinForms.Guna2TextBox lNameBox;
-        private Guna.UI2.WinForms.Guna2TextBox fNameBox;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox pNumberBox;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button BookBtn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private DatabaseRoom1DataSet databaseRoom1DataSet;
+        private System.Windows.Forms.BindingSource roomsBindingSource;
+        private DatabaseRoom1DataSetTableAdapters.roomsTableAdapter roomsTableAdapter;
+        private Guna.UI2.WinForms.Guna2DateTimePicker CheckOut;
+        private Guna.UI2.WinForms.Guna2DataGridView DataGribView;
+        private DataGridViewTextBoxColumn roomNoDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn roomTypeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bedDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private DatabaseRoom1DataSet1 databaseRoom1DataSet1;
+        private BindingSource roomsBindingSource1;
+        private DatabaseRoom1DataSet1TableAdapters.roomsTableAdapter roomsTableAdapter1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2TextBox fNameBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2TextBox lNameBox;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2TextBox RoomBox;
+        private Guna.UI2.WinForms.Guna2DateTimePicker CheckIn;
+        private DataGridViewTextBoxColumn booked;
     }
 }

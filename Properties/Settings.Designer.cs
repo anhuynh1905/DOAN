@@ -33,5 +33,16 @@ namespace DOAN.Properties {
                 return ((string)(this["room_dbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\DatabaseRoom1" +
+            ".mdf;Integrated Security=True")]
+        public string DatabaseRoom1ConnectionString {
+            get {
+                return ((string)(this["DatabaseRoom1ConnectionString"]));
+            }
+        }
     }
 }

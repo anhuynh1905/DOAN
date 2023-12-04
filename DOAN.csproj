@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
@@ -67,6 +68,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseRoom1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseRoom1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseRoom1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseRoom1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GuestClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuestClasses.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Guest_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +114,6 @@
     </Compile>
     <Compile Include="Receptionist_Form.Designer.cs">
       <DependentUpon>Receptionist_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="room_dbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>room_dbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="_Class\Date.cs" />
     <Compile Include="_Class\function.cs" />
@@ -173,6 +184,36 @@
     <EmbeddedResource Include="_controllManager\ViewReport.resx">
       <DependentUpon>ViewReport.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DatabaseRoom1DataSet.xsc">
+      <DependentUpon>DatabaseRoom1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRoom1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseRoom1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseRoom1DataSet.xss">
+      <DependentUpon>DatabaseRoom1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRoom1DataSet1.xsc">
+      <DependentUpon>DatabaseRoom1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseRoom1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseRoom1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseRoom1DataSet1.xss">
+      <DependentUpon>DatabaseRoom1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GuestClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>GuestClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GuestClasses.dbml.layout">
+      <DependentUpon>GuestClasses.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -183,17 +224,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="room_dbDataSet.xsc">
-      <DependentUpon>room_dbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="room_dbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>room_dbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="room_dbDataSet.xss">
-      <DependentUpon>room_dbDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -210,7 +240,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Annotation 2023-05-20 224459.png" />
   </ItemGroup>
@@ -222,18 +254,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DatabaseRoom1.mdf</DependentUpon>
     </Content>
+    <Content Include="_data\room_data.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_data\room_data_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>room_data.mdf</DependentUpon>
+    </Content>
     <None Include="Resources\eye-vector-icon.jpg" />
     <None Include="Resources\eye-icon-vector-23766153.jpg" />
     <None Include="Resources\OIP.jpg" />
     <None Include="Resources\eye-icon-vector-illustration.jpg" />
     <None Include="Resources\OIP %281%29.jpg" />
-    <Content Include="_data\room_db.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="_data\room_db_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>room_db.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
