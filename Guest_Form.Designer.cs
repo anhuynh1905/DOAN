@@ -32,9 +32,6 @@ namespace DOAN
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Guest_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -45,11 +42,6 @@ namespace DOAN
             this.databaseRoom1DataSet = new DOAN.DatabaseRoom1DataSet();
             this.roomsTableAdapter = new DOAN.DatabaseRoom1DataSetTableAdapters.roomsTableAdapter();
             this.CheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGribView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.roomsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.databaseRoom1DataSet1 = new DOAN.DatabaseRoom1DataSet1();
             this.roomsTableAdapter1 = new DOAN.DatabaseRoom1DataSet1TableAdapters.roomsTableAdapter();
@@ -60,10 +52,8 @@ namespace DOAN
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.RoomBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.CheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.booked = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseRoom1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGribView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseRoom1DataSet1)).BeginInit();
             this.SuspendLayout();
@@ -162,89 +152,6 @@ namespace DOAN
             this.CheckOut.Size = new System.Drawing.Size(203, 36);
             this.CheckOut.TabIndex = 10;
             this.CheckOut.Value = new System.DateTime(2023, 12, 4, 14, 0, 24, 409);
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // bedDataGridViewTextBoxColumn
-            // 
-            this.bedDataGridViewTextBoxColumn.DataPropertyName = "bed";
-            this.bedDataGridViewTextBoxColumn.HeaderText = "bed";
-            this.bedDataGridViewTextBoxColumn.Name = "bedDataGridViewTextBoxColumn";
-            // 
-            // roomTypeDataGridViewTextBoxColumn
-            // 
-            this.roomTypeDataGridViewTextBoxColumn.DataPropertyName = "roomType";
-            this.roomTypeDataGridViewTextBoxColumn.HeaderText = "roomType";
-            this.roomTypeDataGridViewTextBoxColumn.Name = "roomTypeDataGridViewTextBoxColumn";
-            // 
-            // roomNoDataGridViewTextBoxColumn
-            // 
-            this.roomNoDataGridViewTextBoxColumn.DataPropertyName = "roomNo";
-            this.roomNoDataGridViewTextBoxColumn.HeaderText = "roomNo";
-            this.roomNoDataGridViewTextBoxColumn.Name = "roomNoDataGridViewTextBoxColumn";
-            // 
-            // DataGribView
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DataGribView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGribView.AutoGenerateColumns = false;
-            this.DataGribView.BackgroundColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Modern No. 20", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGribView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGribView.ColumnHeadersHeight = 16;
-            this.DataGribView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGribView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.roomNoDataGridViewTextBoxColumn,
-            this.roomTypeDataGridViewTextBoxColumn,
-            this.bedDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.booked});
-            this.DataGribView.DataSource = this.roomsBindingSource1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGribView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGribView.GridColor = System.Drawing.Color.White;
-            this.DataGribView.Location = new System.Drawing.Point(12, 66);
-            this.DataGribView.Name = "DataGribView";
-            this.DataGribView.RowHeadersVisible = false;
-            this.DataGribView.Size = new System.Drawing.Size(564, 476);
-            this.DataGribView.TabIndex = 9;
-            this.DataGribView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.DataGribView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DataGribView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DataGribView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DataGribView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DataGribView.ThemeStyle.BackColor = System.Drawing.Color.AliceBlue;
-            this.DataGribView.ThemeStyle.GridColor = System.Drawing.Color.White;
-            this.DataGribView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.DataGribView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGribView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Modern No. 20", 8.25F);
-            this.DataGribView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGribView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGribView.ThemeStyle.HeaderStyle.Height = 16;
-            this.DataGribView.ThemeStyle.ReadOnly = false;
-            this.DataGribView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.DataGribView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DataGribView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.DataGribView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DataGribView.ThemeStyle.RowsStyle.Height = 22;
-            this.DataGribView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGribView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // roomsBindingSource1
             // 
@@ -362,12 +269,6 @@ namespace DOAN
             this.CheckIn.TabIndex = 17;
             this.CheckIn.Value = new System.DateTime(2023, 12, 4, 14, 0, 24, 409);
             // 
-            // booked
-            // 
-            this.booked.DataPropertyName = "booked";
-            this.booked.HeaderText = "booked";
-            this.booked.Name = "booked";
-            // 
             // Guest_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,7 +283,6 @@ namespace DOAN
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.fNameBox);
             this.Controls.Add(this.CheckOut);
-            this.Controls.Add(this.DataGribView);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.BookBtn);
@@ -394,7 +294,6 @@ namespace DOAN
             this.Load += new System.EventHandler(this.Guest_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseRoom1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGribView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseRoom1DataSet1)).EndInit();
             this.ResumeLayout(false);
@@ -414,11 +313,6 @@ namespace DOAN
         private System.Windows.Forms.BindingSource roomsBindingSource;
         private DatabaseRoom1DataSetTableAdapters.roomsTableAdapter roomsTableAdapter;
         private Guna.UI2.WinForms.Guna2DateTimePicker CheckOut;
-        private Guna.UI2.WinForms.Guna2DataGridView DataGribView;
-        private DataGridViewTextBoxColumn roomNoDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn roomTypeDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn bedDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private DatabaseRoom1DataSet1 databaseRoom1DataSet1;
         private BindingSource roomsBindingSource1;
         private DatabaseRoom1DataSet1TableAdapters.roomsTableAdapter roomsTableAdapter1;
@@ -429,6 +323,5 @@ namespace DOAN
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2TextBox RoomBox;
         private Guna.UI2.WinForms.Guna2DateTimePicker CheckIn;
-        private DataGridViewTextBoxColumn booked;
     }
 }
