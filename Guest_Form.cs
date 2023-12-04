@@ -38,16 +38,36 @@ namespace DOAN
         {
             conn = new SqlConnection(connectionstring);
             conn.Open();
-            string command = String.Format("UPDATE Room SET Status='"+"Book"+"' WHERE Id='"+"{0}"+"'", bookBox.Text);
-            SqlDataAdapter adapter = new SqlDataAdapter();
+            DateTime dateTime = DateTime.Today;
+            string command = String.Format("UPDATE Room SET Status='"+"Book"+"', FirstName='"+"{1}"+"', LastName='"+"{2}"+"', Phone='"+"{3}"+"', Date='"+"{4}"+"' WHERE Id='"+"{0}"+"'", 
+                bookBox.Text,fNameBox.Text,lNameBox.Text,pNumberBox.Text,dateTime);
+
+            string check = String.Format("SELECT * FROM Room WHERE Id='" + "{0}" + "'", bookBox.Text);
+            cmd = new SqlCommand(check, conn);
+
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                if (rdr[1].ToString() == "Occupied            ")
+                {
+                    MessageBox.Show("Room already been Occupied!!", "Caution");
+                    rdr.Close();
+                    cmd.Dispose();
+                    conn.Close();
+                    return;
+                }
+            }
+            rdr.Close();
+
             cmd = new SqlCommand(command, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter();
             adapter.UpdateCommand=new SqlCommand(command, conn);
             adapter.UpdateCommand.ExecuteNonQuery();
-
+            MessageBox.Show("Booking Success", "Caution");
             cmd.Dispose();
             conn.Close();
             reload();
-
+            
         }
         private void reload()
         {
@@ -62,6 +82,16 @@ namespace DOAN
             dataGridView.DataSource = bSource;
             sql.Close();
             
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
