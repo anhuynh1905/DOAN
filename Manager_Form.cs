@@ -32,6 +32,13 @@ namespace DOAN
         private void Manager_Form_Load(object sender, EventArgs e)
         {
             roomManager1.Visible = false;
+            viewReport1.Visible = false;
+        }
+
+        private void btView_Click(object sender, EventArgs e)
+        {
+            viewReport1.Visible = true;
+            viewReport1.BringToFront();
         }
     }
 }

@@ -1,8 +1,10 @@
 ﻿using DOAN._Class;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,7 +26,7 @@ namespace DOAN._controllManager
         {
             querry = "select * from rooms";
             DataSet ds = fn.getData(querry);
-            guna2DataGridView1.DataSource = ds.Tables[0];
+            dataRoomManage.DataSource = ds.Tables[0];
         }
 
         private void btAdd_Click(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace DOAN._controllManager
                 String typeBed = cbTypeBed.Text;
                 Int64 price = Convert.ToInt64(txtPriceRoom.Text);
 
-                querry = "insert into rooms (roomNo, roomtype, bed, price) values('"+ idRoom + "','" + typeRoom + "','" + typeBed + "', " + price + ")";
+                querry = "insert into rooms (roomNo, roomtype, bed, price) values('" + idRoom + "','" + typeRoom + "','" + typeBed + "', " + price + ")";
                 fn.setData(querry, "Add room successfully!!!");
 
                 RoomManager_Load(this, null);
@@ -64,6 +66,43 @@ namespace DOAN._controllManager
         private void RoomManager_Enter(object sender, EventArgs e)
         {
             RoomManager_Load(this, null);
+        }
+
+        private void btRemove_Click(object sender, EventArgs e)
+        {
+            if (txtIDRoom.Text != "")
+            {
+                String idRoom = txtIDRoom.Text;
+                querry = "DELETE FROM rooms WHERE roomNo = " + idRoom + "";
+                fn.setData(querry, "Data delted successfully!");
+                RoomManager_Load(this, null);
+                ClearAll();
+            }
+            else
+            {
+                MessageBox.Show("Please fill in the information IDRoom!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            if (txtIDRoom.Text != "" && cbTypeRoom.Text != "" && cbTypeBed.Text != "" && txtPriceRoom.Text != "")
+            {
+                String idRoom = txtIDRoom.Text;
+                String typeRoom = cbTypeRoom.Text;
+                String typeBed = cbTypeBed.Text;
+                Int64 price = Convert.ToInt64(txtPriceRoom.Text);
+
+                querry = "update rooms set roomType = '" + typeRoom + "', bed = '" + typeBed + "', price =  " + price + " where roomNo = '" + idRoom +"'";
+                fn.setData(querry, "Data UPDATE successfully!!!");
+
+                RoomManager_Load(this, null);
+                ClearAll();
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all the information want to UPDATE!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
