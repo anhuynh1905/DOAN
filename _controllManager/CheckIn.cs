@@ -48,7 +48,7 @@ namespace DOAN._controllManager
         int rid;
         private void cbIDcin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            querry = "select RoomPrice, RoomID from Room_Info where RoomNo = '" + cbIDcin.Text + "'";
+            querry = "select RoomPrice, RoomID from Room_Info where RoomID = '" + cbIDcin.Text + "'";
             DataSet ds = fn.getData(querry);
             txtPcin.Text = ds.Tables[0].Rows[0][0].ToString();
             rid = int.Parse(ds.Tables[0].Rows[0][1].ToString());
