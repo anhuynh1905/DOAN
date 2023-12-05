@@ -22,7 +22,7 @@ namespace DOAN
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DatabaseRoom1")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="hotel_db")]
 	public partial class GuestClassesDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,16 +30,13 @@ namespace DOAN
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void Insertcustomer(customer instance);
-    partial void Updatecustomer(customer instance);
-    partial void Deletecustomer(customer instance);
-    partial void Insertroom(room instance);
-    partial void Updateroom(room instance);
-    partial void Deleteroom(room instance);
+    partial void InsertRoom_Info(Room_Info instance);
+    partial void UpdateRoom_Info(Room_Info instance);
+    partial void DeleteRoom_Info(Room_Info instance);
     #endregion
 		
 		public GuestClassesDataContext() : 
-				base(global::DOAN.Properties.Settings.Default.DatabaseRoom1ConnectionString, mappingSource)
+				base(global::DOAN.Properties.Settings.Default.hotel_dbConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -68,269 +65,292 @@ namespace DOAN
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<customer> customers
+		public System.Data.Linq.Table<Room_Info> Room_Infos
 		{
 			get
 			{
-				return this.GetTable<customer>();
-			}
-		}
-		
-		public System.Data.Linq.Table<room> rooms
-		{
-			get
-			{
-				return this.GetTable<room>();
+				return this.GetTable<Room_Info>();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.customer")]
-	public partial class customer : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Room_Info")]
+	public partial class Room_Info : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _cid;
+		private string _FirstName;
 		
-		private string _cfname;
+		private string _LastName;
 		
-		private string _clname;
+		private string _PhoneNumber;
 		
-		private long _mobile;
+		private System.Nullable<System.DateTime> _CheckIn;
 		
-		private System.DateTime _checkin;
+		private System.Nullable<System.DateTime> _CheckOut;
 		
-		private System.Nullable<System.DateTime> _checkout;
+		private string _ChekOut;
 		
-		private string _chekout;
+		private int _RoomID;
 		
-		private int _roomid;
+		private string _RoomStatus;
 		
-		private EntityRef<room> _room;
+		private string _RoomType;
+		
+		private string _RoomPrice;
+		
+		private string _RoomBed;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OncidChanging(int value);
-    partial void OncidChanged();
-    partial void OncfnameChanging(string value);
-    partial void OncfnameChanged();
-    partial void OnclnameChanging(string value);
-    partial void OnclnameChanged();
-    partial void OnmobileChanging(long value);
-    partial void OnmobileChanged();
-    partial void OncheckinChanging(System.DateTime value);
-    partial void OncheckinChanged();
-    partial void OncheckoutChanging(System.Nullable<System.DateTime> value);
-    partial void OncheckoutChanged();
-    partial void OnchekoutChanging(string value);
-    partial void OnchekoutChanged();
-    partial void OnroomidChanging(int value);
-    partial void OnroomidChanged();
+    partial void OnFirstNameChanging(string value);
+    partial void OnFirstNameChanged();
+    partial void OnLastNameChanging(string value);
+    partial void OnLastNameChanged();
+    partial void OnPhoneNumberChanging(string value);
+    partial void OnPhoneNumberChanged();
+    partial void OnCheckInChanging(System.Nullable<System.DateTime> value);
+    partial void OnCheckInChanged();
+    partial void OnCheckOutChanging(System.Nullable<System.DateTime> value);
+    partial void OnCheckOutChanged();
+    partial void OnChekOutChanging(string value);
+    partial void OnChekOutChanged();
+    partial void OnRoomIDChanging(int value);
+    partial void OnRoomIDChanged();
+    partial void OnRoomStatusChanging(string value);
+    partial void OnRoomStatusChanged();
+    partial void OnRoomTypeChanging(string value);
+    partial void OnRoomTypeChanged();
+    partial void OnRoomPriceChanging(string value);
+    partial void OnRoomPriceChanged();
+    partial void OnRoomBedChanging(string value);
+    partial void OnRoomBedChanged();
     #endregion
 		
-		public customer()
+		public Room_Info()
 		{
-			this._room = default(EntityRef<room>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int cid
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NChar(15)")]
+		public string FirstName
 		{
 			get
 			{
-				return this._cid;
+				return this._FirstName;
 			}
 			set
 			{
-				if ((this._cid != value))
+				if ((this._FirstName != value))
 				{
-					this.OncidChanging(value);
+					this.OnFirstNameChanging(value);
 					this.SendPropertyChanging();
-					this._cid = value;
-					this.SendPropertyChanged("cid");
-					this.OncidChanged();
+					this._FirstName = value;
+					this.SendPropertyChanged("FirstName");
+					this.OnFirstNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cfname", DbType="VarChar(250) NOT NULL", CanBeNull=false)]
-		public string cfname
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NChar(15)")]
+		public string LastName
 		{
 			get
 			{
-				return this._cfname;
+				return this._LastName;
 			}
 			set
 			{
-				if ((this._cfname != value))
+				if ((this._LastName != value))
 				{
-					this.OncfnameChanging(value);
+					this.OnLastNameChanging(value);
 					this.SendPropertyChanging();
-					this._cfname = value;
-					this.SendPropertyChanged("cfname");
-					this.OncfnameChanged();
+					this._LastName = value;
+					this.SendPropertyChanged("LastName");
+					this.OnLastNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clname", DbType="VarChar(250) NOT NULL", CanBeNull=false)]
-		public string clname
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="NChar(13)")]
+		public string PhoneNumber
 		{
 			get
 			{
-				return this._clname;
+				return this._PhoneNumber;
 			}
 			set
 			{
-				if ((this._clname != value))
+				if ((this._PhoneNumber != value))
 				{
-					this.OnclnameChanging(value);
+					this.OnPhoneNumberChanging(value);
 					this.SendPropertyChanging();
-					this._clname = value;
-					this.SendPropertyChanged("clname");
-					this.OnclnameChanged();
+					this._PhoneNumber = value;
+					this.SendPropertyChanged("PhoneNumber");
+					this.OnPhoneNumberChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mobile", DbType="BigInt NOT NULL")]
-		public long mobile
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckIn", DbType="Date")]
+		public System.Nullable<System.DateTime> CheckIn
 		{
 			get
 			{
-				return this._mobile;
+				return this._CheckIn;
 			}
 			set
 			{
-				if ((this._mobile != value))
+				if ((this._CheckIn != value))
 				{
-					this.OnmobileChanging(value);
+					this.OnCheckInChanging(value);
 					this.SendPropertyChanging();
-					this._mobile = value;
-					this.SendPropertyChanged("mobile");
-					this.OnmobileChanged();
+					this._CheckIn = value;
+					this.SendPropertyChanged("CheckIn");
+					this.OnCheckInChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_checkin", DbType="DateTime NOT NULL")]
-		public System.DateTime checkin
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckOut", DbType="Date")]
+		public System.Nullable<System.DateTime> CheckOut
 		{
 			get
 			{
-				return this._checkin;
+				return this._CheckOut;
 			}
 			set
 			{
-				if ((this._checkin != value))
+				if ((this._CheckOut != value))
 				{
-					this.OncheckinChanging(value);
+					this.OnCheckOutChanging(value);
 					this.SendPropertyChanging();
-					this._checkin = value;
-					this.SendPropertyChanged("checkin");
-					this.OncheckinChanged();
+					this._CheckOut = value;
+					this.SendPropertyChanged("CheckOut");
+					this.OnCheckOutChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_checkout", DbType="Date")]
-		public System.Nullable<System.DateTime> checkout
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ChekOut", DbType="NChar(15)")]
+		public string ChekOut
 		{
 			get
 			{
-				return this._checkout;
+				return this._ChekOut;
 			}
 			set
 			{
-				if ((this._checkout != value))
+				if ((this._ChekOut != value))
 				{
-					this.OncheckoutChanging(value);
+					this.OnChekOutChanging(value);
 					this.SendPropertyChanging();
-					this._checkout = value;
-					this.SendPropertyChanged("checkout");
-					this.OncheckoutChanged();
+					this._ChekOut = value;
+					this.SendPropertyChanged("ChekOut");
+					this.OnChekOutChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_chekout", DbType="Char(3)")]
-		public string chekout
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoomID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int RoomID
 		{
 			get
 			{
-				return this._chekout;
+				return this._RoomID;
 			}
 			set
 			{
-				if ((this._chekout != value))
+				if ((this._RoomID != value))
 				{
-					this.OnchekoutChanging(value);
+					this.OnRoomIDChanging(value);
 					this.SendPropertyChanging();
-					this._chekout = value;
-					this.SendPropertyChanged("chekout");
-					this.OnchekoutChanged();
+					this._RoomID = value;
+					this.SendPropertyChanged("RoomID");
+					this.OnRoomIDChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roomid", DbType="Int NOT NULL")]
-		public int roomid
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoomStatus", DbType="NChar(15)")]
+		public string RoomStatus
 		{
 			get
 			{
-				return this._roomid;
+				return this._RoomStatus;
 			}
 			set
 			{
-				if ((this._roomid != value))
+				if ((this._RoomStatus != value))
 				{
-					if (this._room.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnroomidChanging(value);
+					this.OnRoomStatusChanging(value);
 					this.SendPropertyChanging();
-					this._roomid = value;
-					this.SendPropertyChanged("roomid");
-					this.OnroomidChanged();
+					this._RoomStatus = value;
+					this.SendPropertyChanged("RoomStatus");
+					this.OnRoomStatusChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="room_customer", Storage="_room", ThisKey="roomid", OtherKey="roomid", IsForeignKey=true)]
-		public room room
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoomType", DbType="NChar(15)")]
+		public string RoomType
 		{
 			get
 			{
-				return this._room.Entity;
+				return this._RoomType;
 			}
 			set
 			{
-				room previousValue = this._room.Entity;
-				if (((previousValue != value) 
-							|| (this._room.HasLoadedOrAssignedValue == false)))
+				if ((this._RoomType != value))
 				{
+					this.OnRoomTypeChanging(value);
 					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._room.Entity = null;
-						previousValue.customers.Remove(this);
-					}
-					this._room.Entity = value;
-					if ((value != null))
-					{
-						value.customers.Add(this);
-						this._roomid = value.roomid;
-					}
-					else
-					{
-						this._roomid = default(int);
-					}
-					this.SendPropertyChanged("room");
+					this._RoomType = value;
+					this.SendPropertyChanged("RoomType");
+					this.OnRoomTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoomPrice", DbType="NChar(15)")]
+		public string RoomPrice
+		{
+			get
+			{
+				return this._RoomPrice;
+			}
+			set
+			{
+				if ((this._RoomPrice != value))
+				{
+					this.OnRoomPriceChanging(value);
+					this.SendPropertyChanging();
+					this._RoomPrice = value;
+					this.SendPropertyChanged("RoomPrice");
+					this.OnRoomPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoomBed", DbType="NChar(15)")]
+		public string RoomBed
+		{
+			get
+			{
+				return this._RoomBed;
+			}
+			set
+			{
+				if ((this._RoomBed != value))
+				{
+					this.OnRoomBedChanging(value);
+					this.SendPropertyChanging();
+					this._RoomBed = value;
+					this.SendPropertyChanged("RoomBed");
+					this.OnRoomBedChanged();
 				}
 			}
 		}
@@ -353,216 +373,6 @@ namespace DOAN
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.rooms")]
-	public partial class room : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _roomid;
-		
-		private string _roomNo;
-		
-		private string _roomType;
-		
-		private string _bed;
-		
-		private long _price;
-		
-		private string _booked;
-		
-		private EntitySet<customer> _customers;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnroomidChanging(int value);
-    partial void OnroomidChanged();
-    partial void OnroomNoChanging(string value);
-    partial void OnroomNoChanged();
-    partial void OnroomTypeChanging(string value);
-    partial void OnroomTypeChanged();
-    partial void OnbedChanging(string value);
-    partial void OnbedChanged();
-    partial void OnpriceChanging(long value);
-    partial void OnpriceChanged();
-    partial void OnbookedChanging(string value);
-    partial void OnbookedChanged();
-    #endregion
-		
-		public room()
-		{
-			this._customers = new EntitySet<customer>(new Action<customer>(this.attach_customers), new Action<customer>(this.detach_customers));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roomid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int roomid
-		{
-			get
-			{
-				return this._roomid;
-			}
-			set
-			{
-				if ((this._roomid != value))
-				{
-					this.OnroomidChanging(value);
-					this.SendPropertyChanging();
-					this._roomid = value;
-					this.SendPropertyChanged("roomid");
-					this.OnroomidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roomNo", DbType="VarChar(250) NOT NULL", CanBeNull=false)]
-		public string roomNo
-		{
-			get
-			{
-				return this._roomNo;
-			}
-			set
-			{
-				if ((this._roomNo != value))
-				{
-					this.OnroomNoChanging(value);
-					this.SendPropertyChanging();
-					this._roomNo = value;
-					this.SendPropertyChanged("roomNo");
-					this.OnroomNoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roomType", DbType="VarChar(250) NOT NULL", CanBeNull=false)]
-		public string roomType
-		{
-			get
-			{
-				return this._roomType;
-			}
-			set
-			{
-				if ((this._roomType != value))
-				{
-					this.OnroomTypeChanging(value);
-					this.SendPropertyChanging();
-					this._roomType = value;
-					this.SendPropertyChanged("roomType");
-					this.OnroomTypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bed", DbType="VarChar(250) NOT NULL", CanBeNull=false)]
-		public string bed
-		{
-			get
-			{
-				return this._bed;
-			}
-			set
-			{
-				if ((this._bed != value))
-				{
-					this.OnbedChanging(value);
-					this.SendPropertyChanging();
-					this._bed = value;
-					this.SendPropertyChanged("bed");
-					this.OnbedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="BigInt NOT NULL")]
-		public long price
-		{
-			get
-			{
-				return this._price;
-			}
-			set
-			{
-				if ((this._price != value))
-				{
-					this.OnpriceChanging(value);
-					this.SendPropertyChanging();
-					this._price = value;
-					this.SendPropertyChanged("price");
-					this.OnpriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_booked", DbType="NChar(3)")]
-		public string booked
-		{
-			get
-			{
-				return this._booked;
-			}
-			set
-			{
-				if ((this._booked != value))
-				{
-					this.OnbookedChanging(value);
-					this.SendPropertyChanging();
-					this._booked = value;
-					this.SendPropertyChanged("booked");
-					this.OnbookedChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="room_customer", Storage="_customers", ThisKey="roomid", OtherKey="roomid")]
-		public EntitySet<customer> customers
-		{
-			get
-			{
-				return this._customers;
-			}
-			set
-			{
-				this._customers.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_customers(customer entity)
-		{
-			this.SendPropertyChanging();
-			entity.room = this;
-		}
-		
-		private void detach_customers(customer entity)
-		{
-			this.SendPropertyChanging();
-			entity.room = null;
 		}
 	}
 }

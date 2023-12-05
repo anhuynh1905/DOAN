@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,23 +32,33 @@ namespace DOAN
 
         private void Guest_Form_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'databaseRoom1DataSet1.rooms' table. You can move, or remove it, as needed.
-            this.roomsTableAdapter1.Fill(this.databaseRoom1DataSet1.rooms);
-            // TODO: This line of code loads data into the 'databaseRoom1DataSet.rooms' table. You can move, or remove it, as needed.
-            this.roomsTableAdapter.Fill(this.databaseRoom1DataSet.rooms);
-
+            // TODO: This line of code loads data into the 'hotel_dbDataSet1.Room_Info' table. You can move, or remove it, as needed.
+            //this.room_InfoTableAdapter1.Fill(this.hotel_dbDataSet1.Room_Info);
+            GuestClassesDataContext db = new GuestClassesDataContext();
+            var list = (from s in db.Room_Infos where s.RoomStatus == "TRUE           " select s).ToList();
+            datagridview.DataSource = list;
         }
 
         private void Book_Click(object sender, EventArgs e)
         {
-            customer cs = new customer();
+            DateTime now = DateTime.Now;
+            if(CheckIn.Value < now)
+            {
+                MessageBox.Show("Ngày không hợp lệ, vui lòng nhập lại ngày", "Status");
+                return;
+            }
             GuestClassesDataContext db = new GuestClassesDataContext();
-            cs.clname = lNameBox.Text;
-            cs.checkout = CheckOut.Value;
-            cs.checkin = CheckIn.Value;
-            cs.cfname = fNameBox.Text;
-            db.customers.InsertOnSubmit(cs);
+            Room_Info customer = new Room_Info();
+            customer = db.Room_Infos.Where(s => s.RoomID == Int32.Parse(RoomBox.Text)).Single();
+            customer.FirstName = fNameBox.Text;
+            customer.LastName = lNameBox.Text;
+            customer.PhoneNumber = pNumberBox.Text;
+            customer.CheckOut = CheckOut.Value;
+            customer.CheckIn = CheckIn.Value;
+            customer.ChekOut = "False";
+            customer.RoomStatus = "False";
             db.SubmitChanges();
+            Guest_Form_Load(sender, e);
         }
     }
 }

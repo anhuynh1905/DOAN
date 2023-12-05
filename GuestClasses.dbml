@@ -1,27 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DatabaseRoom1" Class="GuestClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseRoom1.mdf;Integrated Security=True" SettingsObjectName="DOAN.Properties.Settings" SettingsPropertyName="DatabaseRoom1ConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.customer" Member="customers">
-    <Type Name="customer">
-      <Column Name="cid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="cfname" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
-      <Column Name="clname" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
-      <Column Name="mobile" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="checkin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="checkout" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="chekout" Type="System.String" DbType="Char(3)" CanBeNull="true" />
-      <Column Name="roomid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="room_customer" Member="room" ThisKey="roomid" OtherKey="roomid" Type="room" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.rooms" Member="rooms">
-    <Type Name="room">
-      <Column Name="roomid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="roomNo" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
-      <Column Name="roomType" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
-      <Column Name="bed" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
-      <Column Name="price" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
-      <Column Name="booked" Type="System.String" DbType="NChar(3)" CanBeNull="true" />
-      <Association Name="room_customer" Member="customers" ThisKey="roomid" OtherKey="roomid" Type="customer" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="hotel_db" Class="GuestClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\_data\hotel_db.mdf;Integrated Security=True" SettingsObjectName="DOAN.Properties.Settings" SettingsPropertyName="hotel_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Room_Info" Member="Room_Infos">
+    <Type Name="Room_Info">
+      <Column Name="FirstName" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+      <Column Name="CheckIn" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CheckOut" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ChekOut" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="RoomID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoomStatus" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="RoomType" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="RoomPrice" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="RoomBed" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
