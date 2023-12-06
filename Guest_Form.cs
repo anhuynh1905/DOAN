@@ -36,6 +36,8 @@ namespace DOAN
             GuestClassesDataContext db = new GuestClassesDataContext();
             var list = (from s in db.Room_Infos where s.RoomStatus.ToString().Trim() == "TRUE" select s).ToList();
             datagridview.DataSource = list;
+            feedBack1.Visible = false;
+            
         }
 
         private void Book_Click(object sender, EventArgs e)
@@ -76,6 +78,12 @@ namespace DOAN
             conn.Close();
             cmd.Dispose();
             Guest_Form_Load(sender, e);
+        }
+
+        private void Feed_Click(object sender, EventArgs e)
+        {
+            feedBack1.Visible = true;
+            feedBack1.BringToFront();
         }
     }
 }
