@@ -61,28 +61,6 @@ namespace DOAN
                 this.Hide();
                 recep.ShowDialog();
             }
-
-            /*
-            if (txtUser.Text == "anhan" && txtPass.Text == "spkt123" && cbPermiss.Text == "Manager")
-            {
-                lbStatus.Visible = false;
-                Manager_Form manager = new Manager_Form();
-                this.Hide();
-                manager.ShowDialog();
-            }
-            else if (txtUser.Text == "anhphuong" && txtPass.Text == "spkt123" && cbPermiss.Text == "Receptionist")
-            {
-                lbStatus.Visible = false;
-                Receptionist_Form recep = new Receptionist_Form();
-                this.Hide();
-                recep.ShowDialog();
-            }
-            else
-            {
-                lbStatus.Visible = true;
-                txtPass.Clear();
-            }
-            */
         }
     }
 }
