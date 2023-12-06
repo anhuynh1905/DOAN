@@ -73,7 +73,7 @@ namespace DOAN._controllManager
             if (txtIDRoom.Text != "")
             {
                 String idRoom = txtIDRoom.Text;
-                querry = "DELETE FROM Room_Info WHERE RoomNo = " + idRoom + "";
+                querry = "DELETE FROM Room_Info WHERE RoomID = " + idRoom + "";
                 fn.setData(querry, "Data deleted successfully!");
                 RoomManager_Load(this, null);
                 ClearAll();
@@ -93,7 +93,7 @@ namespace DOAN._controllManager
                 String typeRoom = cbTypeRoom.Text;
                 Int64 price = Convert.ToInt64(txtPriceRoom.Text);
 
-                querry = "update Room_Info set RoomBed = '" + typeBed + "', RoomType = '" + typeRoom + "', RoomPrice =  " + price + " where RoomNo = '" + idRoom +"'";
+                querry = "update Room_Info set RoomBed = '" + typeBed + "', RoomType = '" + typeRoom + "', RoomPrice =  " + price + " where RoomID = '" + idRoom +"'";
                 fn.setData(querry, "Data UPDATE successfully!!!");
 
                 RoomManager_Load(this, null);
