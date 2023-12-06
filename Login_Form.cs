@@ -53,13 +53,13 @@ namespace DOAN
             {
                 Manager_Form manager = new Manager_Form();
                 this.Hide();
-                //manager.ShowDialog();
+                manager.ShowDialog();
             }
             else
             {
                 Receptionist_Form recep = new Receptionist_Form();
                 this.Hide();
-                //recep.ShowDialog();
+                recep.ShowDialog();
             }
 
             /*
