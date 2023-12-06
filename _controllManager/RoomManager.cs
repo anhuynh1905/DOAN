@@ -36,9 +36,9 @@ namespace DOAN._controllManager
                 String idRoom = txtIDRoom.Text;
                 String typeBed = cbTypeBed.Text;
                 String typeRoom = cbTypeRoom.Text;
-                Int64 price = Convert.ToInt64(txtPriceRoom.Text);
+                String price = (txtPriceRoom.Text);
 
-                querry = "insert into Room_Info (RoomNo, RoomType, RoomBed, RoomPrice) values('" + idRoom + "','" + typeRoom + "', '" + typeBed + "', " + price + ")";
+                querry = "insert into Room_Info (RoomID, RoomType, RoomBed, RoomPrice) values('" + idRoom + "','" + typeRoom + "', '" + typeBed + "', " + price + ")";
                 fn.setData(querry, "Add room successfully!!!");
 
                 RoomManager_Load(this, null);
