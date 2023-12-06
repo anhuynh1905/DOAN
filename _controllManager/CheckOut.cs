@@ -27,14 +27,14 @@ namespace DOAN._controllManager
 
         private void CheckOut_Load(object sender, EventArgs e)
         {
-            querry = "select Room_Info.LastName, Room_Info.PhoneNumber, Room_Info.CheckIn, Room_Info.RoomNo, Room_Info.RoomStatus, Room_Info.RoomType, Room_Info.RoomPrice, Room_Info.RoomBed from Room_Info where ChekOut = 'NO'";
+            querry = "select Room_Info.LastName, Room_Info.PhoneNumber, Room_Info.CheckIn, Room_Info.RoomID, Room_Info.RoomStatus, Room_Info.RoomType, Room_Info.RoomPrice, Room_Info.RoomBed from Room_Info where ChekOut = 'TRUE'";
             DataSet ds = fn.getData(querry);
             dataCheckOut.DataSource = ds.Tables[0];
         }
 
         private void txtEnter_TextChanged(object sender, EventArgs e)
         {
-            querry = "select Room_Info.LastName, Room_Info.PhoneNumber, Room_Info.CheckIn, Room_Info.RoomNo, Room_Info.RoomStatus, Room_Info.RoomType, Room_Info.RoomPrice, Room_Info.RoomBed from Room_Info where LastName like = '" + txtEnter.Text + "' and ChekOut = 'NO'";
+            querry = "select Room_Info.LastName, Room_Info.PhoneNumber, Room_Info.CheckIn, Room_Info.RoomID, Room_Info.RoomStatus, Room_Info.RoomType, Room_Info.RoomPrice, Room_Info.RoomBed from Room_Info where LastName like '" + txtEnter.Text + "' and ChekOut = 'TRUE'";
             DataSet ds = fn.getData(querry);
             dataCheckOut.DataSource = ds.Tables[0];
         }
@@ -56,7 +56,7 @@ namespace DOAN._controllManager
                 if (MessageBox.Show("Are you sure to CheckOut?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
                     String cdate = timeCheckOut.Text;
-                    querry = "update Room_Info set ChekOut = 'YES' where LastName = '" + txtNameGuest.Text + "' update Room_Info set RoomStatus = 'NO' where RoomNo = '" + txtRoomGuest.Text + "'";
+                    querry = "update Room_Info set ChekOut = 'FALSE' where LastName = '" + txtNameGuest.Text + "' update Room_Info set RoomStatus = 'TRUE' where RoomID = '" + txtRoomGuest.Text + "'";
                     fn.setData(querry, "CheckOut successfully!");
                     CheckOut_Load(this, null);
                     ClearAll();
