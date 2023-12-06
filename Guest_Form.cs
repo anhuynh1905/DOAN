@@ -35,7 +35,7 @@ namespace DOAN
             // TODO: This line of code loads data into the 'hotel_dbDataSet1.Room_Info' table. You can move, or remove it, as needed.
             //this.room_InfoTableAdapter1.Fill(this.hotel_dbDataSet1.Room_Info);
             GuestClassesDataContext db = new GuestClassesDataContext();
-            var list = (from s in db.Room_Infos where s.RoomStatus == "TRUE           " select s).ToList();
+            var list = (from s in db.Room_Infos where s.RoomStatus.ToString().Trim() == "TRUE" select s).ToList();
             datagridview.DataSource = list;
         }
 
