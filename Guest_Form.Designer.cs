@@ -530,8 +530,8 @@ namespace DOAN
             this.btfeed.FillColor = System.Drawing.Color.Gray;
             this.btfeed.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btfeed.ForeColor = System.Drawing.Color.White;
-            this.btfeed.Location = new System.Drawing.Point(704, 522);
-            this.btfeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btfeed.Location = new System.Drawing.Point(704, 560);
+            this.btfeed.Margin = new System.Windows.Forms.Padding(2);
             this.btfeed.Name = "btfeed";
             this.btfeed.Size = new System.Drawing.Size(135, 37);
             this.btfeed.TabIndex = 24;
