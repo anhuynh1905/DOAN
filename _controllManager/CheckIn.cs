@@ -16,7 +16,7 @@ namespace DOAN._controllManager
 {
     public partial class CheckIn : UserControl
     {
-        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\DOAN\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
+        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
         SqlConnection conn = new SqlConnection(connectionString);
         SqlCommand cmd;
         SqlDataReader rdr;

@@ -15,6 +15,7 @@ namespace DOAN._controllManager
     {
         function fn = new function();
         String query;
+        String queue;
         public ViewReport()
         {
             InitializeComponent();
@@ -25,6 +26,10 @@ namespace DOAN._controllManager
             query = "select Feed_Info.FirstName, Feed_Info.LastName, Feed_Info.PhoneNumber, Feed_Info.RoomID, Feed_Info.DateFB, Feed_Info.Satis, Feed_Info.Comment, Feed_Info.Future from Feed_Info";
             DataSet ds = fn.getData(query);
             feedback.DataSource = ds.Tables[0];
+
+            queue = "select CheckOut.RoomID, CheckOut.Firstname, CheckOut.LastName, CheckOut.PhoneNumber, CheckOut.DateCO, CheckOut.RoomPrice from CheckOut";
+            DataSet da = fn.getData(queue);
+            revenue.DataSource = da.Tables[0];
         }
     }
 }
