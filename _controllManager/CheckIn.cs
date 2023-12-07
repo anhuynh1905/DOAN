@@ -42,7 +42,7 @@ namespace DOAN._controllManager
         private void cbTRcin_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbIDcin.Items.Clear();
-            querry = "select RoomNo from Room_Info where RoomBed = '" + cbBed.Text + "' and RoomType = '" + cbTRcin.Text + "' and RoomStatus = 'NO'";
+            querry = "select RoomID from Room_Info where RoomBed = '" + cbBed.Text + "' and RoomType = '" + cbTRcin.Text + "' and RoomStatus = 'TRUE'";
             setComboBox(querry, cbIDcin);
         }
         int rid;
@@ -63,7 +63,7 @@ namespace DOAN._controllManager
                 Int64 mobile = Int64.Parse(txtPNcin.Text);
                 String timeCI = timeCheckIn.Text;
 
-                querry = "insert into Room_Info (FirstName, LastName, PhoneNumber, CheckIn) values ('" + firstname + "', '" + lastname + "', " + mobile + ", '" + timeCI +"') update Room_Info set RoomStatus = 'YES' where RoomNo = '" + cbIDcin.Text + "'";
+                querry = "insert into Room_Info (FirstName, LastName, PhoneNumber, CheckIn) values ('" + firstname + "', '" + lastname + "', " + mobile + ", '" + timeCI +"') update Room_Info set RoomStatus = 'FALSE' where RoomID = '" + cbIDcin.Text + "'";
                 fn.setData(querry, "Check_In successfully!");
                 ClearAll();
             }

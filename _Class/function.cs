@@ -15,7 +15,7 @@ namespace DOAN._Class
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\DOAN\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
+            con.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
             return con;
         }
         
