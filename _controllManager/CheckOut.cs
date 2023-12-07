@@ -17,7 +17,7 @@ namespace DOAN._controllManager
     public partial class CheckOut : UserControl
     {
         function fn = new function();
-        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
+        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DoAn_OOP\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
         SqlConnection conn = new SqlConnection(connectionString);
         SqlCommand cmd;
         SqlDataReader rdr;
@@ -70,7 +70,7 @@ namespace DOAN._controllManager
         {
             if (dataGridView.Rows.Count > 1)
             {
-                string data = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
+                string data = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DoAn_OOP\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
                 string query = "insert into CheckOut (RoomID, FirstName, LastName, PhoneNumber, DateCO, RoomPrice) select RoomID, FirstName, LastName, PhoneNumber, CheckOut, RoomPrice from Room_Info where RoomID = '" + rIDBox.Text + "'";
                 SqlConnection db = new SqlConnection(data);
                 SqlCommand cmd = new SqlCommand(query, db);
@@ -90,7 +90,7 @@ namespace DOAN._controllManager
                 }
 
 
-                command = "UPDATE Room_Info SET FirstName = '"+DBNull.Value+"', LastName = '"+DBNull.Value+"', PhoneNumber = '"+DBNull.Value+"', CheckIn = '"+DBNull.Value+"', CheckOut = '"+DBNull.Value+"', ChekOut = '"+"TRUE"+"', RoomStatus = '"+DBNull.Value+"' WHERE RoomID = '" + rIDBox.Text + "'";
+                command = "UPDATE Room_Info SET FirstName = '"+DBNull.Value+"', LastName = '"+DBNull.Value+"', PhoneNumber = '"+DBNull.Value+"', CheckIn = '"+DBNull.Value+"', CheckOut = '"+DBNull.Value+"', ChekOut = '"+"EMPTY"+"', RoomStatus = '"+DBNull.Value+"' WHERE RoomID = '" + rIDBox.Text + "'";
                 conn.Open();
                 cmd = new SqlCommand(command, conn);
                 cmd.ExecuteNonQuery();

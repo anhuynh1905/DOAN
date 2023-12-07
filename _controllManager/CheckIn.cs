@@ -16,7 +16,7 @@ namespace DOAN._controllManager
 {
     public partial class CheckIn : UserControl
     {
-        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
+        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DoAn_OOP\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
         SqlConnection conn = new SqlConnection(connectionString);
         SqlCommand cmd;
         SqlDataReader rdr;
@@ -39,7 +39,7 @@ namespace DOAN._controllManager
             if(dataGridView.Rows.Count > 1)
             {
                 conn.Open();
-                command = "UPDATE Room_Info SET CheckIn='" + DateTime.Today + "', RoomStatus='" + "FALSE" + "', ChekOut='" + "FALSE" + "' WHERE FirstName = '" + fNameBox.Text + "' AND LastName = '" + lNameBox.Text + "' AND PhoneNumber = '" + pNumberBox.Text + "'";
+                command = "UPDATE Room_Info SET CheckIn='" + DateTime.Today + "', RoomStatus='" + "OCCUPIED" + "', ChekOut='" + "OCCUPIED" + "' WHERE FirstName = '" + fNameBox.Text + "' AND LastName = '" + lNameBox.Text + "' AND PhoneNumber = '" + pNumberBox.Text + "'";
                 cmd = new SqlCommand(command, conn);
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
@@ -57,7 +57,7 @@ namespace DOAN._controllManager
         {
             conn.Open();
             adapter = new SqlDataAdapter();
-            command = String.Format("SELECT * FROM Room_Info WHERE PhoneNumber='" + "{0}" + "' AND FirstName='" + "{1}" + "' AND LastName='" + "{2}" + "' AND RoomStatus = '"+"TRUE"+"'", pNumberBox.Text, fNameBox.Text, lNameBox.Text);
+            command = String.Format("SELECT * FROM Room_Info WHERE PhoneNumber='" + "{0}" + "' AND FirstName='" + "{1}" + "' AND LastName='" + "{2}" + "' AND RoomStatus = '"+"EMPTY"+"'", pNumberBox.Text, fNameBox.Text, lNameBox.Text);
             adapter.SelectCommand = new SqlCommand(command, conn);
 
             DataTable table = new DataTable();
