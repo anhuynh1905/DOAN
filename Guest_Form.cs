@@ -17,7 +17,7 @@ namespace DOAN
 {
     public partial class Guest_Form : Form
     {
-        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DoAn_OOP\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
+        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\anhuynh1905\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
         SqlConnection conn = new SqlConnection(connectionString);
         SqlCommand cmd;
         SqlDataAdapter adapter;
