@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN._Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +16,12 @@ namespace DOAN
 {
     public partial class Login_Form : Form
     {
-        static string cn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\Source\\Repos\\anhuynh1905\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
+        static string cn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\anhuynh1905\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
         SqlConnection sql = new SqlConnection(cn);
         SqlCommand cmd;
         SqlDataReader rdr;
+        List<Manager> managers = new List<Manager>();
+        List<Receptionist> receptionists = new List<Receptionist>();
         public Login_Form()
         {
             InitializeComponent();
@@ -51,12 +54,16 @@ namespace DOAN
             }
             if(staff.Role.ToString().Trim() == "Manager" )
             {
+                managers.Add(new Manager(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
+                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
                 Manager_Form manager = new Manager_Form();
                 this.Hide();
                 manager.ShowDialog();
             }
             else
             {
+                receptionists.Add(new Receptionist(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
+                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
                 Receptionist_Form recep = new Receptionist_Form();
                 this.Hide();
                 recep.ShowDialog();

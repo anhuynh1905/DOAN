@@ -137,7 +137,6 @@
     <Compile Include="Receptionist_Form.Designer.cs">
       <DependentUpon>Receptionist_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="_Class\Date.cs" />
     <Compile Include="_Class\function.cs" />
     <Compile Include="_Class\Guest.cs" />
     <Compile Include="_Class\Manager.cs" />

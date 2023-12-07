@@ -15,8 +15,8 @@ namespace DOAN._Class
         public string Username { get { return username; } set { username = value; } }
         public string Password { get { return password; } set { password = value; } }
         public Staff(string _username, string _password, string _role, 
-            string _firstname, string _lastname, string _phonenumber, int bmonth, int bday, int byear)
-            : base(_firstname, _lastname, _phonenumber, bmonth, bday, byear)
+            string _firstname, string _lastname, string _phonenumber)
+            : base(_firstname, _lastname, _phonenumber)
         {
             Username = username;
             Password = password;

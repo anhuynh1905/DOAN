@@ -8,8 +8,8 @@ namespace DOAN._Class
 {
     public class Guest : Person
     {
-        public Guest(string _firstname, string _lastname, string _phonenumber, int bmonth, int bday, int byear)
-            : base(_firstname, _lastname, _phonenumber, bmonth, bday, byear) { }
+        public Guest(string _firstname, string _lastname, string _phonenumber)
+            : base(_firstname, _lastname, _phonenumber) { }
         public override string toString()
         {
             return "Welcome to my Hotel";

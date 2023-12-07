@@ -8,6 +8,7 @@ namespace DOAN._Class
 {
     public class Manager : Staff
     {
-        public Manager(string _username, string _password, string _role, string _firstname, string _lastname, string _phonenumber, int bmonth, int bday, int byear) : base(_username, _password, _role, _firstname, _lastname, _phonenumber, bmonth, bday, byear) { }
+        public Manager(string _username, string _password, string _role, string _firstname, string _lastname, string _phonenumber) : base(_username, _password, _role, _firstname, _lastname, _phonenumber) { }
     }
 }
+ 
