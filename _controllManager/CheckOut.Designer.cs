@@ -29,273 +29,290 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lbCheckout = new System.Windows.Forms.Label();
-            this.lbSearch = new System.Windows.Forms.Label();
-            this.txtEnter = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dataCheckOut = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.lbNameGuest = new System.Windows.Forms.Label();
-            this.txtNameGuest = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbRoomGuest = new System.Windows.Forms.Label();
-            this.txtRoomGuest = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbTimeCOut = new System.Windows.Forms.Label();
-            this.timeCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.btConfirmCOut = new Guna.UI2.WinForms.Guna2Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataCheckOut)).BeginInit();
+            this.rIDBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.fRoomInfoBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chekOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomBedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotel_dbDataSet3 = new DOAN.hotel_dbDataSet3();
+            this.room_InfoTableAdapter = new DOAN.hotel_dbDataSet3TableAdapters.Room_InfoTableAdapter();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotel_dbDataSet3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbCheckout
-            // 
-            this.lbCheckout.AutoSize = true;
-            this.lbCheckout.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCheckout.Location = new System.Drawing.Point(394, 0);
-            this.lbCheckout.Name = "lbCheckout";
-            this.lbCheckout.Size = new System.Drawing.Size(201, 40);
-            this.lbCheckout.TabIndex = 0;
-            this.lbCheckout.Text = "Check_Out";
-            // 
-            // lbSearch
-            // 
-            this.lbSearch.AutoSize = true;
-            this.lbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbSearch.Location = new System.Drawing.Point(0, 43);
-            this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(122, 20);
-            this.lbSearch.TabIndex = 1;
-            this.lbSearch.Text = "Search Name";
-            // 
-            // txtEnter
-            // 
-            this.txtEnter.BorderColor = System.Drawing.Color.Silver;
-            this.txtEnter.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEnter.DefaultText = "";
-            this.txtEnter.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEnter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEnter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEnter.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEnter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEnter.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEnter.ForeColor = System.Drawing.Color.Black;
-            this.txtEnter.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEnter.Location = new System.Drawing.Point(4, 68);
-            this.txtEnter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEnter.Name = "txtEnter";
-            this.txtEnter.PasswordChar = '\0';
-            this.txtEnter.PlaceholderText = "Enter Fullname";
-            this.txtEnter.SelectedText = "";
-            this.txtEnter.Size = new System.Drawing.Size(186, 47);
-            this.txtEnter.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtEnter.TabIndex = 2;
-            this.txtEnter.TextChanged += new System.EventHandler(this.txtEnter_TextChanged);
-            // 
-            // dataCheckOut
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dataCheckOut.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCheckOut.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataCheckOut.ColumnHeadersHeight = 4;
-            this.dataCheckOut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataCheckOut.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataCheckOut.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataCheckOut.Location = new System.Drawing.Point(4, 124);
-            this.dataCheckOut.Name = "dataCheckOut";
-            this.dataCheckOut.RowHeadersVisible = false;
-            this.dataCheckOut.RowHeadersWidth = 51;
-            this.dataCheckOut.RowTemplate.Height = 24;
-            this.dataCheckOut.Size = new System.Drawing.Size(1022, 294);
-            this.dataCheckOut.TabIndex = 3;
-            this.dataCheckOut.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataCheckOut.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dataCheckOut.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dataCheckOut.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dataCheckOut.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dataCheckOut.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dataCheckOut.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataCheckOut.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dataCheckOut.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataCheckOut.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dataCheckOut.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataCheckOut.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataCheckOut.ThemeStyle.HeaderStyle.Height = 4;
-            this.dataCheckOut.ThemeStyle.ReadOnly = false;
-            this.dataCheckOut.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataCheckOut.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataCheckOut.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dataCheckOut.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataCheckOut.ThemeStyle.RowsStyle.Height = 24;
-            this.dataCheckOut.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataCheckOut.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataCheckOut.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCheckOut_CellContentClick);
-            // 
-            // lbNameGuest
-            // 
-            this.lbNameGuest.AutoSize = true;
-            this.lbNameGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbNameGuest.Location = new System.Drawing.Point(238, 43);
-            this.lbNameGuest.Name = "lbNameGuest";
-            this.lbNameGuest.Size = new System.Drawing.Size(57, 20);
-            this.lbNameGuest.TabIndex = 1;
-            this.lbNameGuest.Text = "Name";
-            // 
-            // txtNameGuest
-            // 
-            this.txtNameGuest.BorderColor = System.Drawing.Color.Silver;
-            this.txtNameGuest.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNameGuest.DefaultText = "";
-            this.txtNameGuest.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNameGuest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNameGuest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameGuest.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNameGuest.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameGuest.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.txtNameGuest.ForeColor = System.Drawing.Color.Black;
-            this.txtNameGuest.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNameGuest.Location = new System.Drawing.Point(242, 68);
-            this.txtNameGuest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNameGuest.Name = "txtNameGuest";
-            this.txtNameGuest.PasswordChar = '\0';
-            this.txtNameGuest.PlaceholderText = "Fullname";
-            this.txtNameGuest.ReadOnly = true;
-            this.txtNameGuest.SelectedText = "";
-            this.txtNameGuest.Size = new System.Drawing.Size(131, 46);
-            this.txtNameGuest.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtNameGuest.TabIndex = 2;
-            // 
-            // lbRoomGuest
-            // 
-            this.lbRoomGuest.AutoSize = true;
-            this.lbRoomGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbRoomGuest.Location = new System.Drawing.Point(409, 43);
-            this.lbRoomGuest.Name = "lbRoomGuest";
-            this.lbRoomGuest.Size = new System.Drawing.Size(57, 20);
-            this.lbRoomGuest.TabIndex = 1;
-            this.lbRoomGuest.Text = "Room";
-            this.lbRoomGuest.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // txtRoomGuest
-            // 
-            this.txtRoomGuest.BorderColor = System.Drawing.Color.Silver;
-            this.txtRoomGuest.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRoomGuest.DefaultText = "";
-            this.txtRoomGuest.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRoomGuest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRoomGuest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomGuest.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomGuest.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRoomGuest.Font = new System.Drawing.Font("Segoe UI", 10.8F);
-            this.txtRoomGuest.ForeColor = System.Drawing.Color.Black;
-            this.txtRoomGuest.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRoomGuest.Location = new System.Drawing.Point(413, 66);
-            this.txtRoomGuest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtRoomGuest.Name = "txtRoomGuest";
-            this.txtRoomGuest.PasswordChar = '\0';
-            this.txtRoomGuest.PlaceholderText = "RoomID";
-            this.txtRoomGuest.ReadOnly = true;
-            this.txtRoomGuest.SelectedText = "";
-            this.txtRoomGuest.Size = new System.Drawing.Size(154, 48);
-            this.txtRoomGuest.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtRoomGuest.TabIndex = 2;
-            // 
-            // lbTimeCOut
-            // 
-            this.lbTimeCOut.AutoSize = true;
-            this.lbTimeCOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lbTimeCOut.Location = new System.Drawing.Point(604, 43);
-            this.lbTimeCOut.Name = "lbTimeCOut";
-            this.lbTimeCOut.Size = new System.Drawing.Size(148, 20);
-            this.lbTimeCOut.TabIndex = 4;
-            this.lbTimeCOut.Text = "Time Check_Out";
-            // 
-            // timeCheckOut
-            // 
-            this.timeCheckOut.Checked = true;
-            this.timeCheckOut.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.timeCheckOut.Location = new System.Drawing.Point(604, 66);
-            this.timeCheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeCheckOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeCheckOut.Name = "timeCheckOut";
-            this.timeCheckOut.Size = new System.Drawing.Size(170, 47);
-            this.timeCheckOut.TabIndex = 5;
-            this.timeCheckOut.Value = new System.DateTime(2023, 12, 2, 9, 22, 50, 394);
-            // 
-            // btConfirmCOut
-            // 
-            this.btConfirmCOut.BorderRadius = 15;
-            this.btConfirmCOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btConfirmCOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btConfirmCOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btConfirmCOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btConfirmCOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btConfirmCOut.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirmCOut.ForeColor = System.Drawing.Color.Black;
-            this.btConfirmCOut.Location = new System.Drawing.Point(818, 66);
-            this.btConfirmCOut.Name = "btConfirmCOut";
-            this.btConfirmCOut.Size = new System.Drawing.Size(162, 45);
-            this.btConfirmCOut.TabIndex = 6;
-            this.btConfirmCOut.Text = "Check_Out";
-            this.btConfirmCOut.Click += new System.EventHandler(this.btConfirmCOut_Click);
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // rIDBox
+            // 
+            this.rIDBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rIDBox.DefaultText = "";
+            this.rIDBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.rIDBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.rIDBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.rIDBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.rIDBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rIDBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.rIDBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rIDBox.Location = new System.Drawing.Point(174, 39);
+            this.rIDBox.Name = "rIDBox";
+            this.rIDBox.PasswordChar = '\0';
+            this.rIDBox.PlaceholderText = "";
+            this.rIDBox.SelectedText = "";
+            this.rIDBox.Size = new System.Drawing.Size(200, 27);
+            this.rIDBox.TabIndex = 0;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Century", 16F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(49, 39);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(97, 27);
+            this.guna2HtmlLabel1.TabIndex = 1;
+            this.guna2HtmlLabel1.Text = "Room ID";
+            // 
+            // fRoomInfoBtn
+            // 
+            this.fRoomInfoBtn.BorderRadius = 15;
+            this.fRoomInfoBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.fRoomInfoBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.fRoomInfoBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.fRoomInfoBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.fRoomInfoBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.fRoomInfoBtn.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fRoomInfoBtn.ForeColor = System.Drawing.Color.Black;
+            this.fRoomInfoBtn.Location = new System.Drawing.Point(427, 39);
+            this.fRoomInfoBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.fRoomInfoBtn.Name = "fRoomInfoBtn";
+            this.fRoomInfoBtn.Size = new System.Drawing.Size(161, 30);
+            this.fRoomInfoBtn.TabIndex = 11;
+            this.fRoomInfoBtn.Text = "Find Room Info";
+            this.fRoomInfoBtn.Click += new System.EventHandler(this.fRoomInfoBtn_Click);
+            // 
+            // dataGridView
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView.AutoGenerateColumns = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView.ColumnHeadersHeight = 15;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.checkInDataGridViewTextBoxColumn,
+            this.checkOutDataGridViewTextBoxColumn,
+            this.chekOutDataGridViewTextBoxColumn,
+            this.roomIDDataGridViewTextBoxColumn,
+            this.roomStatusDataGridViewTextBoxColumn,
+            this.roomTypeDataGridViewTextBoxColumn,
+            this.roomPriceDataGridViewTextBoxColumn,
+            this.roomBedDataGridViewTextBoxColumn});
+            this.dataGridView.DataSource = this.roomInfoBindingSource;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView.Location = new System.Drawing.Point(16, 88);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersVisible = false;
+            this.dataGridView.Size = new System.Drawing.Size(915, 282);
+            this.dataGridView.TabIndex = 12;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.dataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridView.ThemeStyle.HeaderStyle.Height = 15;
+            this.dataGridView.ThemeStyle.ReadOnly = false;
+            this.dataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.dataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridView.ThemeStyle.RowsStyle.Height = 22;
+            this.dataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // checkInDataGridViewTextBoxColumn
+            // 
+            this.checkInDataGridViewTextBoxColumn.DataPropertyName = "CheckIn";
+            this.checkInDataGridViewTextBoxColumn.HeaderText = "CheckIn";
+            this.checkInDataGridViewTextBoxColumn.Name = "checkInDataGridViewTextBoxColumn";
+            // 
+            // checkOutDataGridViewTextBoxColumn
+            // 
+            this.checkOutDataGridViewTextBoxColumn.DataPropertyName = "CheckOut";
+            this.checkOutDataGridViewTextBoxColumn.HeaderText = "CheckOut";
+            this.checkOutDataGridViewTextBoxColumn.Name = "checkOutDataGridViewTextBoxColumn";
+            // 
+            // chekOutDataGridViewTextBoxColumn
+            // 
+            this.chekOutDataGridViewTextBoxColumn.DataPropertyName = "ChekOut";
+            this.chekOutDataGridViewTextBoxColumn.HeaderText = "ChekOut";
+            this.chekOutDataGridViewTextBoxColumn.Name = "chekOutDataGridViewTextBoxColumn";
+            // 
+            // roomIDDataGridViewTextBoxColumn
+            // 
+            this.roomIDDataGridViewTextBoxColumn.DataPropertyName = "RoomID";
+            this.roomIDDataGridViewTextBoxColumn.HeaderText = "RoomID";
+            this.roomIDDataGridViewTextBoxColumn.Name = "roomIDDataGridViewTextBoxColumn";
+            // 
+            // roomStatusDataGridViewTextBoxColumn
+            // 
+            this.roomStatusDataGridViewTextBoxColumn.DataPropertyName = "RoomStatus";
+            this.roomStatusDataGridViewTextBoxColumn.HeaderText = "RoomStatus";
+            this.roomStatusDataGridViewTextBoxColumn.Name = "roomStatusDataGridViewTextBoxColumn";
+            // 
+            // roomTypeDataGridViewTextBoxColumn
+            // 
+            this.roomTypeDataGridViewTextBoxColumn.DataPropertyName = "RoomType";
+            this.roomTypeDataGridViewTextBoxColumn.HeaderText = "RoomType";
+            this.roomTypeDataGridViewTextBoxColumn.Name = "roomTypeDataGridViewTextBoxColumn";
+            // 
+            // roomPriceDataGridViewTextBoxColumn
+            // 
+            this.roomPriceDataGridViewTextBoxColumn.DataPropertyName = "RoomPrice";
+            this.roomPriceDataGridViewTextBoxColumn.HeaderText = "RoomPrice";
+            this.roomPriceDataGridViewTextBoxColumn.Name = "roomPriceDataGridViewTextBoxColumn";
+            // 
+            // roomBedDataGridViewTextBoxColumn
+            // 
+            this.roomBedDataGridViewTextBoxColumn.DataPropertyName = "RoomBed";
+            this.roomBedDataGridViewTextBoxColumn.HeaderText = "RoomBed";
+            this.roomBedDataGridViewTextBoxColumn.Name = "roomBedDataGridViewTextBoxColumn";
+            // 
+            // roomInfoBindingSource
+            // 
+            this.roomInfoBindingSource.DataMember = "Room_Info";
+            this.roomInfoBindingSource.DataSource = this.hotel_dbDataSet3;
+            // 
+            // hotel_dbDataSet3
+            // 
+            this.hotel_dbDataSet3.DataSetName = "hotel_dbDataSet3";
+            this.hotel_dbDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // room_InfoTableAdapter
+            // 
+            this.room_InfoTableAdapter.ClearBeforeFill = true;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(710, 394);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(221, 30);
+            this.guna2Button1.TabIndex = 13;
+            this.guna2Button1.Text = "Confirm Check Out";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // CheckOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.Controls.Add(this.btConfirmCOut);
-            this.Controls.Add(this.timeCheckOut);
-            this.Controls.Add(this.lbTimeCOut);
-            this.Controls.Add(this.dataCheckOut);
-            this.Controls.Add(this.txtRoomGuest);
-            this.Controls.Add(this.lbRoomGuest);
-            this.Controls.Add(this.txtNameGuest);
-            this.Controls.Add(this.lbNameGuest);
-            this.Controls.Add(this.txtEnter);
-            this.Controls.Add(this.lbSearch);
-            this.Controls.Add(this.lbCheckout);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.fRoomInfoBtn);
+            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.rIDBox);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CheckOut";
-            this.Size = new System.Drawing.Size(1043, 436);
+            this.Size = new System.Drawing.Size(951, 469);
             this.Load += new System.EventHandler(this.CheckOut_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataCheckOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotel_dbDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbCheckout;
-        private System.Windows.Forms.Label lbSearch;
-        private Guna.UI2.WinForms.Guna2TextBox txtEnter;
-        private Guna.UI2.WinForms.Guna2DataGridView dataCheckOut;
-        private System.Windows.Forms.Label lbNameGuest;
-        private Guna.UI2.WinForms.Guna2TextBox txtNameGuest;
-        private System.Windows.Forms.Label lbRoomGuest;
-        private Guna.UI2.WinForms.Guna2TextBox txtRoomGuest;
-        private System.Windows.Forms.Label lbTimeCOut;
-        private Guna.UI2.WinForms.Guna2DateTimePicker timeCheckOut;
-        private Guna.UI2.WinForms.Guna2Button btConfirmCOut;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TextBox rIDBox;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn checkInDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn checkOutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chekOutDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomStatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomPriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomBedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource roomInfoBindingSource;
+        private hotel_dbDataSet3 hotel_dbDataSet3;
+        private Guna.UI2.WinForms.Guna2Button fRoomInfoBtn;
+        private hotel_dbDataSet3TableAdapters.Room_InfoTableAdapter room_InfoTableAdapter;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

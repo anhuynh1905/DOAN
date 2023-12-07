@@ -3,77 +3,81 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace DOAN._controllManager
 {
     public partial class CheckOut : UserControl
     {
         function fn = new function();
-        String querry;
+        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\DOAN\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
+        SqlConnection conn = new SqlConnection(connectionString);
+        SqlCommand cmd;
+        SqlDataReader rdr;
+        SqlDataAdapter adapter;
+        string command;
         public CheckOut()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CheckOut_Load(object sender, EventArgs e)
         {
-            querry = "select Room_Info.LastName, Room_Info.PhoneNumber, Room_Info.CheckIn, Room_Info.RoomID, Room_Info.RoomStatus, Room_Info.RoomType, Room_Info.RoomPrice, Room_Info.RoomBed from Room_Info where ChekOut = 'TRUE'";
-            DataSet ds = fn.getData(querry);
-            dataCheckOut.DataSource = ds.Tables[0];
+
+        }
+        private void search()
+        {
+            conn.Open();
+            adapter = new SqlDataAdapter();
+            command = String.Format("SELECT * FROM Room_Info WHERE RoomID = '"+"{0}"+"'",rIDBox.Text);
+            adapter.SelectCommand = new SqlCommand(command, conn);
+
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+
+            dataGridView.DataSource = bSource;
+            conn.Close();
         }
 
-        private void txtEnter_TextChanged(object sender, EventArgs e)
+        private void fRoomInfoBtn_Click(object sender, EventArgs e)
         {
-            querry = "select Room_Info.LastName, Room_Info.PhoneNumber, Room_Info.CheckIn, Room_Info.RoomID, Room_Info.RoomStatus, Room_Info.RoomType, Room_Info.RoomPrice, Room_Info.RoomBed from Room_Info where LastName like '" + txtEnter.Text + "' and ChekOut = 'TRUE'";
-            DataSet ds = fn.getData(querry);
-            dataCheckOut.DataSource = ds.Tables[0];
-        }
-        int id;
-        private void dataCheckOut_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataCheckOut.Rows[e.RowIndex].Cells[e.RowIndex].Value != null)
+            if (string.IsNullOrWhiteSpace(rIDBox.Text))
             {
-                id = int.Parse(dataCheckOut.Rows[e.RowIndex].Cells[0].Value.ToString());
-                txtNameGuest.Text = dataCheckOut.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtRoomGuest.Text = dataCheckOut.Rows[e.RowIndex].Cells[2].Value.ToString();
+                MessageBox.Show("Không tìm thấy thông tin phòng", "Status");
+                return;
+            }
+            search();
+            if (dataGridView.Rows.Count == 1)
+            {
+                MessageBox.Show("Vui lòng nhập lại thông tin", "Status");
+                return;
             }
         }
 
-        private void btConfirmCOut_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (txtNameGuest.Text != "")
+            if (dataGridView.Rows.Count > 1)
             {
-                if (MessageBox.Show("Are you sure to CheckOut?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-                {
-                    String cdate = timeCheckOut.Text;
-                    querry = "update Room_Info set ChekOut = 'FALSE' where LastName = '" + txtNameGuest.Text + "' update Room_Info set RoomStatus = 'TRUE' where RoomID = '" + txtRoomGuest.Text + "'";
-                    fn.setData(querry, "CheckOut successfully!");
-                    CheckOut_Load(this, null);
-                    ClearAll();
-                }
+                command = "UPDATE Room_Info SET FirstName = '"+DBNull.Value+"', LastName = '"+DBNull.Value+"', PhoneNumber = '"+DBNull.Value+"', CheckIn = '"+DBNull.Value+"', CheckOut = '"+DBNull.Value+"', ChekOut = '"+"TRUE"+"', RoomStatus = '"+DBNull.Value+"' WHERE RoomID = '" + rIDBox.Text + "'";
+                conn.Open();
+                cmd = new SqlCommand(command, conn);
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                conn.Close();
+                search();
+                MessageBox.Show("Đã xác nhận Check Out Thành công !", "Status");
             }
-            else
-            {
-                MessageBox.Show("No customer information for payment!", "Notice!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        public void ClearAll()
-        {
-            txtEnter.Clear();
-            txtNameGuest.Clear();
-            txtRoomGuest.Clear();
-            timeCheckOut.ResetText();
         }
     }
 }

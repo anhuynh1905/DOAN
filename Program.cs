@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN._controllManager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace DOAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Base_Form());
+            Application.Run(new Receptionist_Form());
         }
     }
 }

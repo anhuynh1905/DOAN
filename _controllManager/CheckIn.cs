@@ -6,29 +6,22 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace DOAN._controllManager
 {
     public partial class CheckIn : UserControl
     {
-        function fn = new function();
-        String querry;
-
-        public void setComboBox(String query, ComboBox combo)
-        {
-            SqlDataReader sdr = fn.getForCombo(query);
-            while (sdr.Read())
-            {
-                for (int i = 0; i < sdr.FieldCount; i++)
-                {
-                    combo.Items.Add(sdr.GetString(i));
-                }
-            }
-            sdr.Close();
-        }
+        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\DOAN\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
+        SqlConnection conn = new SqlConnection(connectionString);
+        SqlCommand cmd;
+        SqlDataReader rdr;
+        SqlDataAdapter adapter;
+        string command;
         public CheckIn()
         {
             InitializeComponent();
@@ -39,57 +32,58 @@ namespace DOAN._controllManager
 
         }
 
-        private void cbTRcin_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cbIDcin.Items.Clear();
-            querry = "select RoomID from Room_Info where RoomBed = '" + cbBed.Text + "' and RoomType = '" + cbTRcin.Text + "' and RoomStatus = 'TRUE'";
-            setComboBox(querry, cbIDcin);
-        }
-        int rid;
-        private void cbIDcin_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            querry = "select RoomPrice, RoomID from Room_Info where RoomID = '" + cbIDcin.Text + "'";
-            DataSet ds = fn.getData(querry);
-            txtPcin.Text = ds.Tables[0].Rows[0][0].ToString();
-            rid = int.Parse(ds.Tables[0].Rows[0][1].ToString());
-        }
+
 
         private void btConfirmCIN_Click(object sender, EventArgs e)
         {
-            if (txtFNcin.Text != "" && txtLNcin.Text != "" && txtPNcin.Text != "")
+            if(dataGridView.Rows.Count > 1)
             {
-                String firstname = txtFNcin.Text;
-                String lastname = txtLNcin.Text;
-                Int64 mobile = Int64.Parse(txtPNcin.Text);
-                String timeCI = timeCheckIn.Text;
-
-                querry = "insert into Room_Info (FirstName, LastName, PhoneNumber, CheckIn) values ('" + firstname + "', '" + lastname + "', " + mobile + ", '" + timeCI +"') update Room_Info set RoomStatus = 'FALSE' where RoomID = '" + cbIDcin.Text + "'";
-                fn.setData(querry, "Check_In successfully!");
-                ClearAll();
+                conn.Open();
+                command = "UPDATE Room_Info SET CheckIn='" + DateTime.Today + "', RoomStatus='" + "FALSE" + "', ChekOut='" + "FALSE" + "' WHERE FirstName = '" + fNameBox.Text + "' AND LastName = '" + lNameBox.Text + "' AND PhoneNumber = '" + pNumberBox.Text + "'";
+                cmd = new SqlCommand(command, conn);
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                conn.Close();
+                search();
             }
             else
             {
-                MessageBox.Show("Please fill in all the information!!!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập lại thông tin", "Status");
+                return;
             }
         }
 
-        public void ClearAll()
+        private void search()
         {
-            txtFNcin.Clear();
-            txtLNcin.Clear();
-            txtPNcin.Clear();
-            timeCheckIn.ResetText();
-            cbBed.SelectedIndex = -1;
-            cbTRcin.SelectedIndex = -1;
-            cbIDcin.Items.Clear();
-            txtPcin.Clear();
+            conn.Open();
+            adapter = new SqlDataAdapter();
+            command = String.Format("SELECT * FROM Room_Info WHERE PhoneNumber='" + "{0}" + "' AND FirstName='" + "{1}" + "' AND LastName='" + "{2}" + "' AND RoomStatus = '"+"TRUE"+"'", pNumberBox.Text, fNameBox.Text, lNameBox.Text);
+            adapter.SelectCommand = new SqlCommand(command, conn);
+
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+
+            dataGridView.DataSource = bSource;
+            conn.Close();
         }
 
-        private void cbBed_SelectedIndexChanged(object sender, EventArgs e)
+        private void fRoomInfoBtn_Click(object sender, EventArgs e)
         {
-            cbTRcin.SelectedIndex = -1;
-            cbIDcin.Items.Clear();
-            txtPcin.Clear();
+            if(string.IsNullOrWhiteSpace(fNameBox.Text) || string.IsNullOrWhiteSpace(lNameBox.Text) || string.IsNullOrWhiteSpace(pNumberBox.Text))
+            {
+                MessageBox.Show("Không tìm thấy thông tin phòng", "Status");
+                return;
+            }
+            search();
+            if(dataGridView.Rows.Count == 1)
+            {
+                MessageBox.Show("Vui lòng nhập lại thông tin", "Status");
+                return;
+            }
         }
     }
 }

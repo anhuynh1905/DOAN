@@ -48,9 +48,10 @@
             this.panel1.Controls.Add(this.btCheckout);
             this.panel1.Controls.Add(this.btCheckin);
             this.panel1.Controls.Add(this.lbNoticeRecep);
-            this.panel1.Location = new System.Drawing.Point(79, 12);
+            this.panel1.Location = new System.Drawing.Point(59, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(839, 78);
+            this.panel1.Size = new System.Drawing.Size(630, 64);
             this.panel1.TabIndex = 2;
             // 
             // btCheckout
@@ -63,9 +64,10 @@
             this.btCheckout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btCheckout.Font = new System.Drawing.Font("Century", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCheckout.ForeColor = System.Drawing.Color.Black;
-            this.btCheckout.Location = new System.Drawing.Point(646, 15);
+            this.btCheckout.Location = new System.Drawing.Point(484, 12);
+            this.btCheckout.Margin = new System.Windows.Forms.Padding(2);
             this.btCheckout.Name = "btCheckout";
-            this.btCheckout.Size = new System.Drawing.Size(159, 45);
+            this.btCheckout.Size = new System.Drawing.Size(119, 37);
             this.btCheckout.TabIndex = 2;
             this.btCheckout.Text = "CheckOut";
             this.btCheckout.Click += new System.EventHandler(this.btCheckout_Click);
@@ -81,9 +83,10 @@
             this.btCheckin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btCheckin.Font = new System.Drawing.Font("Century", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCheckin.ForeColor = System.Drawing.Color.Black;
-            this.btCheckin.Location = new System.Drawing.Point(468, 15);
+            this.btCheckin.Location = new System.Drawing.Point(351, 12);
+            this.btCheckin.Margin = new System.Windows.Forms.Padding(2);
             this.btCheckin.Name = "btCheckin";
-            this.btCheckin.Size = new System.Drawing.Size(148, 45);
+            this.btCheckin.Size = new System.Drawing.Size(111, 37);
             this.btCheckin.TabIndex = 1;
             this.btCheckin.Text = "CheckIn";
             this.btCheckin.Click += new System.EventHandler(this.btCheckin_Click);
@@ -94,9 +97,10 @@
             this.lbNoticeRecep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lbNoticeRecep.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbNoticeRecep.Font = new System.Drawing.Font("Corbel", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbNoticeRecep.Location = new System.Drawing.Point(28, 13);
+            this.lbNoticeRecep.Location = new System.Drawing.Point(21, 11);
+            this.lbNoticeRecep.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNoticeRecep.Name = "lbNoticeRecep";
-            this.lbNoticeRecep.Size = new System.Drawing.Size(385, 47);
+            this.lbNoticeRecep.Size = new System.Drawing.Size(313, 39);
             this.lbNoticeRecep.TabIndex = 0;
             this.lbNoticeRecep.Text = "Receptionist Functions";
             // 
@@ -108,9 +112,10 @@
             // checkOut1
             // 
             this.checkOut1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.checkOut1.Location = new System.Drawing.Point(12, 119);
+            this.checkOut1.Location = new System.Drawing.Point(9, 97);
+            this.checkOut1.Margin = new System.Windows.Forms.Padding(2);
             this.checkOut1.Name = "checkOut1";
-            this.checkOut1.Size = new System.Drawing.Size(1043, 436);
+            this.checkOut1.Size = new System.Drawing.Size(962, 486);
             this.checkOut1.TabIndex = 3;
             // 
             // btExitRecep
@@ -125,9 +130,10 @@
             this.btExitRecep.ForeColor = System.Drawing.Color.White;
             this.btExitRecep.Image = ((System.Drawing.Image)(resources.GetObject("btExitRecep.Image")));
             this.btExitRecep.ImageSize = new System.Drawing.Size(30, 30);
-            this.btExitRecep.Location = new System.Drawing.Point(12, 12);
+            this.btExitRecep.Location = new System.Drawing.Point(9, 10);
+            this.btExitRecep.Margin = new System.Windows.Forms.Padding(2);
             this.btExitRecep.Name = "btExitRecep";
-            this.btExitRecep.Size = new System.Drawing.Size(40, 40);
+            this.btExitRecep.Size = new System.Drawing.Size(30, 32);
             this.btExitRecep.TabIndex = 1;
             this.btExitRecep.Click += new System.EventHandler(this.btExitRecep_Click);
             // 
@@ -139,22 +145,24 @@
             // checkIn1
             // 
             this.checkIn1.BackColor = System.Drawing.Color.LightGray;
-            this.checkIn1.Location = new System.Drawing.Point(13, 119);
+            this.checkIn1.Location = new System.Drawing.Point(9, 97);
+            this.checkIn1.Margin = new System.Windows.Forms.Padding(2);
             this.checkIn1.Name = "checkIn1";
-            this.checkIn1.Size = new System.Drawing.Size(1043, 436);
+            this.checkIn1.Size = new System.Drawing.Size(961, 470);
             this.checkIn1.TabIndex = 4;
             // 
             // Receptionist_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1068, 567);
+            this.ClientSize = new System.Drawing.Size(982, 578);
             this.Controls.Add(this.checkIn1);
             this.Controls.Add(this.checkOut1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btExitRecep);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Receptionist_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receptionist_Form";

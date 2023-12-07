@@ -101,6 +101,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>hotel_dbDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="hotel_dbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hotel_dbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hotel_dbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hotel_dbDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +266,28 @@
     </None>
     <None Include="hotel_dbDataSet1.xss">
       <DependentUpon>hotel_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="hotel_dbDataSet2.xsc">
+      <DependentUpon>hotel_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="hotel_dbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hotel_dbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hotel_dbDataSet2.xss">
+      <DependentUpon>hotel_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="hotel_dbDataSet3.xsc">
+      <DependentUpon>hotel_dbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="hotel_dbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hotel_dbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hotel_dbDataSet3.xss">
+      <DependentUpon>hotel_dbDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
