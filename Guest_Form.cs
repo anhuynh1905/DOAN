@@ -85,8 +85,8 @@ namespace DOAN
             }
             reader.Close();
             guests.Add(new Guest(fNameBox.Text, lNameBox.Text, pNumberBox.Text));
-            insert = String.Format("UPDATE Room_Info SET FirstName='"+"{0}"+"', LastName='"+"{1}"+"', PhoneNumber='"+"{2}"+"', CheckIn='"+"{3}"+"', CheckOut='"+"{4}"+"', RoomStatus='"+"Occupied"+ "' WHERE RoomID='"+"{5}"+"'",
-                        fNameBox.Text, lNameBox.Text, pNumberBox.Text, CheckIn.Value, CheckOut.Value,Int32.Parse(RoomBox.Text));
+            insert = String.Format("UPDATE Room_Info SET FirstName='" + "{0}" + "', LastName='" + "{1}" + "', PhoneNumber='" + "{2}" + "', CheckIn='" + "{3}" + "', CheckOut='" + "{4}" + "', RoomStatus='" + "Occupied" + "' WHERE RoomID='" + "{5}" + "'",
+                        fNameBox.Text, lNameBox.Text, pNumberBox.Text, CheckIn.Value, CheckOut.Value, Int32.Parse(RoomBox.Text));
             cmd = new SqlCommand(insert, conn);
             cmd.ExecuteNonQuery();
 

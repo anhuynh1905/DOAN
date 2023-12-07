@@ -16,7 +16,7 @@ namespace DOAN
 {
     public partial class Login_Form : Form
     {
-        static string cn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\anhuynh1905\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
+        static string cn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
         SqlConnection sql = new SqlConnection(cn);
         SqlCommand cmd;
         SqlDataReader rdr;
@@ -48,23 +48,22 @@ namespace DOAN
             }
             catch 
             {
-                MessageBox.Show(staff.UserName.ToString() + " " + staff.PassWord.ToString());
                 lbStatus.Visible = true;
                 txtPass.Clear();
                 return;
             }
             if(staff.Role.ToString().Trim() == "Manager" )
             {
-                //managers.Add(new Manager(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
-                //  staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
+                managers.Add(new Manager(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
+                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
                 Manager_Form manager = new Manager_Form();
                 this.Hide();
                 manager.ShowDialog();
             }
             else
             {
-                //receptionists.Add(new Receptionist(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
-                // staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
+                receptionists.Add(new Receptionist(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
+                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
                 Receptionist_Form recep = new Receptionist_Form();
                 this.Hide();
                 recep.ShowDialog();

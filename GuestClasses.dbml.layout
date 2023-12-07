@@ -2,16 +2,16 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GuestClasses">
   <DataContextMoniker Name="/GuestClassesDataContext" />
   <nestedChildShapes>
-    <classShape Id="10d3e01a-415c-455d-9cfe-d1df99553754" absoluteBounds="6.125, 1.375, 2, 2.9247054036458331">
+    <classShape Id="771817e2-211c-4b28-a63a-4b19e972687f" absoluteBounds="2.125, 1.5, 2, 2.9247054036458331">
       <DataClassMoniker Name="/GuestClassesDataContext/Room_Info" />
       <nestedChildShapes>
-        <elementListCompartment Id="56890b57-929d-4761-93af-80874b393f7f" absoluteBounds="6.14, 1.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="39bc3654-642d-45df-b2b2-e22e0e89e967" absoluteBounds="2.14, 1.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="ec61cc43-3ef3-493e-b440-143cc34b35af" absoluteBounds="1.75, 1.5, 2, 1.9631982421875">
+    <classShape Id="456bc881-00f2-4705-8fe4-4223c0d9b49f" absoluteBounds="4.5, 1.875, 2, 1.9631982421875">
       <DataClassMoniker Name="/GuestClassesDataContext/Staff" />
       <nestedChildShapes>
-        <elementListCompartment Id="ebb5548c-d06a-4a6d-9b6d-d10f1eb77ece" absoluteBounds="1.7649999999999997, 1.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="43a0aa66-b7f9-4ded-98ac-841d3b4a63e6" absoluteBounds="4.515, 2.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
