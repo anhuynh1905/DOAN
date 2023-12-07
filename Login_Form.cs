@@ -48,22 +48,23 @@ namespace DOAN
             }
             catch 
             {
+                MessageBox.Show(staff.UserName.ToString() + " " + staff.PassWord.ToString());
                 lbStatus.Visible = true;
                 txtPass.Clear();
                 return;
             }
             if(staff.Role.ToString().Trim() == "Manager" )
             {
-                managers.Add(new Manager(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
-                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
+                //managers.Add(new Manager(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
+                //  staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
                 Manager_Form manager = new Manager_Form();
                 this.Hide();
                 manager.ShowDialog();
             }
             else
             {
-                receptionists.Add(new Receptionist(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
-                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
+                //receptionists.Add(new Receptionist(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
+                // staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
                 Receptionist_Form recep = new Receptionist_Form();
                 this.Hide();
                 recep.ShowDialog();
