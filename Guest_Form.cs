@@ -17,7 +17,7 @@ namespace DOAN
 {
     public partial class Guest_Form : Form
     {
-        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\anhuynh1905\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
+        static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DoAn_OOP\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
         SqlConnection conn = new SqlConnection(connectionString);
         SqlCommand cmd;
         SqlDataAdapter adapter;
@@ -39,7 +39,7 @@ namespace DOAN
         {
             conn.Open();
             adapter = new SqlDataAdapter();
-            command = "SELECT * FROM Room_Info WHERE RoomStatus = '"+"Empty"+"'";
+            command = "SELECT * FROM Room_Info WHERE RoomStatus = '"+"EMPTY"+"'";
             adapter.SelectCommand = new SqlCommand(command, conn);
 
             DataTable table = new DataTable();
@@ -74,7 +74,7 @@ namespace DOAN
             reader = cmd.ExecuteReader();
             while(reader.Read())
             {
-                if (Convert.ToString(reader["RoomStatus"]).Trim() == "FALSE")
+                if (Convert.ToString(reader["RoomStatus"]).Trim() == "OCCUPIED")
                 {
                     Statuslable.Text = "Room is already been occupied, please choose another room";
                     reader.Close();
@@ -85,7 +85,7 @@ namespace DOAN
             }
             reader.Close();
             guests.Add(new Guest(fNameBox.Text, lNameBox.Text, pNumberBox.Text));
-            insert = String.Format("UPDATE Room_Info SET FirstName='" + "{0}" + "', LastName='" + "{1}" + "', PhoneNumber='" + "{2}" + "', CheckIn='" + "{3}" + "', CheckOut='" + "{4}" + "', RoomStatus='" + "Occupied" + "' WHERE RoomID='" + "{5}" + "'",
+            insert = String.Format("UPDATE Room_Info SET FirstName='" + "{0}" + "', LastName='" + "{1}" + "', PhoneNumber='" + "{2}" + "', CheckIn='" + "{3}" + "', CheckOut='" + "{4}" + "', RoomStatus='" + "OCCUPIED" + "' WHERE RoomID='" + "{5}" + "'",
                         fNameBox.Text, lNameBox.Text, pNumberBox.Text, CheckIn.Value, CheckOut.Value, Int32.Parse(RoomBox.Text));
             cmd = new SqlCommand(insert, conn);
             cmd.ExecuteNonQuery();
