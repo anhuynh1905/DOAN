@@ -405,6 +405,8 @@ namespace DOAN
 		
 		private string _PhoneNumber;
 		
+		private System.Nullable<System.DateTime> _Birthday;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -421,6 +423,8 @@ namespace DOAN
     partial void OnRoleChanged();
     partial void OnPhoneNumberChanging(string value);
     partial void OnPhoneNumberChanged();
+    partial void OnBirthdayChanging(System.Nullable<System.DateTime> value);
+    partial void OnBirthdayChanged();
     #endregion
 		
 		public Staff()
@@ -544,6 +548,26 @@ namespace DOAN
 					this._PhoneNumber = value;
 					this.SendPropertyChanged("PhoneNumber");
 					this.OnPhoneNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Birthday", DbType="Date")]
+		public System.Nullable<System.DateTime> Birthday
+		{
+			get
+			{
+				return this._Birthday;
+			}
+			set
+			{
+				if ((this._Birthday != value))
+				{
+					this.OnBirthdayChanging(value);
+					this.SendPropertyChanging();
+					this._Birthday = value;
+					this.SendPropertyChanged("Birthday");
+					this.OnBirthdayChanged();
 				}
 			}
 		}
