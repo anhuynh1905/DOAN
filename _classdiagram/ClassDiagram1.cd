@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DOAN._Class.Guest">
+    <Position X="1.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Class\Guest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DOAN._Class.Manager">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Class\Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DOAN._Class.Person">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAhAAAAIAAAARAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Class\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DOAN._Class.Receptionist">
+    <Position X="9" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Class\Receptionist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DOAN._Class.Room">
+    <Position X="6" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAGgAAAAgAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Class\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DOAN._Class.Staff">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEQAABBEAAAAAAAACAAAAAgAAAAA=</HashCode>
+      <FileName>_Class\Staff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
