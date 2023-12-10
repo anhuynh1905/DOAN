@@ -2,16 +2,10 @@
 using DOAN._controllManager;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace DOAN
 {
@@ -104,7 +98,15 @@ namespace DOAN
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string h = "";
-            h += guests.Last().PrintDetails();
+            try
+            {
+                h += guests.Last().PrintDetails();
+            }
+            catch
+            {
+                Statuslable.Text = "You have not enter booking details yet!!!";
+                return;
+            }
             conn.Open();
             command = guests.Last().FindRoom();
             cmd = new SqlCommand(command,conn);
