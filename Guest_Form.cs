@@ -100,7 +100,7 @@ namespace DOAN
             string h = "";
             try
             {
-                h += guests.Last().PrintDetails();
+                h += guests.Last().PrintDetails() + Environment.NewLine;
             }
             catch
             {
