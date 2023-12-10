@@ -144,6 +144,7 @@
     <Compile Include="_Class\Receptionist.cs" />
     <Compile Include="_Class\Room.cs" />
     <Compile Include="_Class\Staff.cs" />
+    <Compile Include="_Class\StaffCombo.cs" />
     <Compile Include="_controllManager\CheckIn.cs">
       <SubType>UserControl</SubType>
     </Compile>

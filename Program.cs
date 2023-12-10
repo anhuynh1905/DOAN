@@ -18,8 +18,6 @@ namespace DOAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            List<Manager> managers = new List<Manager>();
-            List<Receptionist> receptionists = new List<Receptionist>();
             Application.Run(new Base_Form());
         }
     }

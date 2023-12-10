@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOAN._Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,13 @@ namespace DOAN
         {
             checkIn1.Visible = true;
             checkIn1.BringToFront();
+        }
+
+        private void Info_Click(object sender, EventArgs e)
+        {
+            string h = "";
+            h += StaffCombo.PrintDetails("") + Environment.NewLine;
+            MessageBox.Show(h, "Booking Details");
         }
     }
 }

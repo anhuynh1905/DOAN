@@ -1,7 +1,9 @@
-﻿using System;
+﻿using DOAN._Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -39,6 +41,13 @@ namespace DOAN
         {
             viewReport1.Visible = true;
             viewReport1.BringToFront();
+        }
+
+        private void Info_Click(object sender, EventArgs e)
+        {
+            string h = "";
+                h += StaffCombo.PrintDetails("manager") + Environment.NewLine;
+            MessageBox.Show(h, "Booking Details");
         }
     }
 }

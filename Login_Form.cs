@@ -20,8 +20,6 @@ namespace DOAN
         SqlConnection sql = new SqlConnection(cn);
         SqlCommand cmd;
         SqlDataReader rdr;
-        List<Manager> managers = new List<Manager>();
-        List<Receptionist> receptionists = new List<Receptionist>();
         public Login_Form()
         {
             InitializeComponent();
@@ -54,16 +52,16 @@ namespace DOAN
             }
             if(staff.Role.ToString().Trim() == "Manager" )
             {
-                managers.Add(new Manager(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
-                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
+                StaffCombo.addmanager(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
+                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim());
                 Manager_Form manager = new Manager_Form();
                 this.Hide();
                 manager.ShowDialog();
             }
             else
             {
-                receptionists.Add(new Receptionist(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
-                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim()));
+                StaffCombo.addreception(staff.UserName.ToString().Trim(), staff.PassWord.ToString().Trim(), staff.Role.ToString().Trim(),
+                    staff.FirstName.ToString().Trim(), staff.LastName.ToString().Trim(), staff.PhoneNumber.ToString().Trim());
                 Receptionist_Form recep = new Receptionist_Form();
                 this.Hide();
                 recep.ShowDialog();
