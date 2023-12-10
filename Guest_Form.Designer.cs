@@ -75,6 +75,7 @@ namespace DOAN
             this.Statuslable = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btfeed = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.feedBack1 = new DOAN._controllManager.FeedBack();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseRoom1DataSet)).BeginInit();
@@ -530,19 +531,36 @@ namespace DOAN
             this.btfeed.FillColor = System.Drawing.Color.Gray;
             this.btfeed.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btfeed.ForeColor = System.Drawing.Color.White;
-            this.btfeed.Location = new System.Drawing.Point(704, 560);
+            this.btfeed.Location = new System.Drawing.Point(802, 543);
             this.btfeed.Margin = new System.Windows.Forms.Padding(2);
             this.btfeed.Name = "btfeed";
-            this.btfeed.Size = new System.Drawing.Size(135, 37);
+            this.btfeed.Size = new System.Drawing.Size(135, 32);
             this.btfeed.TabIndex = 24;
             this.btfeed.Text = "Feed Back";
             this.btfeed.Click += new System.EventHandler(this.btfeed_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Gray;
+            this.guna2Button1.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(683, 599);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(255, 32);
+            this.guna2Button1.TabIndex = 26;
+            this.guna2Button1.Text = "View Booking detail";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // feedBack1
             // 
             this.feedBack1.BackColor = System.Drawing.Color.White;
             this.feedBack1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.feedBack1.Location = new System.Drawing.Point(2, -4);
+            this.feedBack1.Location = new System.Drawing.Point(2, -5);
             this.feedBack1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.feedBack1.Name = "feedBack1";
             this.feedBack1.Size = new System.Drawing.Size(946, 644);
@@ -554,6 +572,7 @@ namespace DOAN
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(948, 640);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btfeed);
             this.Controls.Add(this.Statuslable);
             this.Controls.Add(this.guna2DataGridView2);
@@ -637,5 +656,6 @@ namespace DOAN
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btfeed;
         private _controllManager.FeedBack feedBack1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

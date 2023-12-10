@@ -22,6 +22,6 @@ namespace DOAN._Class
             Phonenumber = _phonenumber;
         }
 
-        public abstract string toString();
+        public abstract string PrintDetails();
     }
 }

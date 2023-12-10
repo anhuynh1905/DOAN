@@ -21,7 +21,7 @@ namespace DOAN
         SqlConnection conn = new SqlConnection(connectionString);
         SqlCommand cmd;
         SqlDataAdapter adapter;
-        
+        List<Guest> guests = new List<Guest>();
         string command;
         string insert;
         SqlDataReader reader;
@@ -67,7 +67,7 @@ namespace DOAN
                 Statuslable.Text = "Please enter more information";
                 return;
             }
-            List<Guest> guests = new List<Guest>();
+            
             conn.Open();
             command = String.Format("SELECT RoomStatus FROM Room_Info WHERE RoomID = '" + "{0}" + "'", Int32.Parse(RoomBox.Text));
             cmd = new SqlCommand(command, conn);
@@ -85,8 +85,7 @@ namespace DOAN
             }
             reader.Close();
             guests.Add(new Guest(fNameBox.Text, lNameBox.Text, pNumberBox.Text));
-            insert = String.Format("UPDATE Room_Info SET FirstName='" + "{0}" + "', LastName='" + "{1}" + "', PhoneNumber='" + "{2}" + "', CheckIn='" + "{3}" + "', CheckOut='" + "{4}" + "', RoomStatus='" + "OCCUPIED" + "' WHERE RoomID='" + "{5}" + "'",
-                        fNameBox.Text, lNameBox.Text, pNumberBox.Text, CheckIn.Value, CheckOut.Value, Int32.Parse(RoomBox.Text));
+            insert = guests.Last().MakeReservation(fNameBox.Text, lNameBox.Text, pNumberBox.Text, CheckIn, CheckOut, RoomBox.Text);
             cmd = new SqlCommand(insert, conn);
             cmd.ExecuteNonQuery();
 
@@ -100,6 +99,21 @@ namespace DOAN
         {
             feedBack1.Visible = true;
             feedBack1.BringToFront();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            string h = "";
+            h += guests.Last().PrintDetails();
+            conn.Open();
+            command = guests.Last().FindRoom();
+            cmd = new SqlCommand(command,conn);
+            reader = cmd.ExecuteReader();
+            while(reader.Read())        //34689 10
+            {
+                h += "Check in date: "+reader[3].ToString() + ", check out date: " + reader[4].ToString() + ", Room ID: " + reader[6].ToString() + ", Room Type: " + reader[8].ToString() +", Room Price: "+ reader[9].ToString() + ", Room Bed " + reader[10].ToString();
+            }
+            MessageBox.Show(h, "Booking Details");
         }
     }
 }

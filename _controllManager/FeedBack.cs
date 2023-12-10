@@ -28,7 +28,7 @@ namespace DOAN._controllManager
 
             if (txtFirst.Text != "" && txtLast.Text != "" && txtPhone.Text != "" && txtRoomID.Text != "" && date.Text != "" && txtSatis.Text != "" && txtComment.Text != "" && txtFuture.Text != "")
             {
-                string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DoAn_OOP\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
+                string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\anhuynh1905\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
                 string query = "insert into Feed_Info (FirstName, LastName, PhoneNumber, RoomID, DateFB, Satis, Comment, Future) values('" + txtFirst.Text + "', '" + txtLast.Text + "', '" + txtPhone.Text + "','" + txtRoomID.Text + "', '" + date.Text + "', '" + txtSatis.Text + "', '" + txtComment.Text + "', '" + txtFuture.Text + "')";
                 SqlConnection db = new SqlConnection(conn);
                 SqlCommand cmd = new SqlCommand(query, db);

@@ -23,7 +23,7 @@ namespace DOAN._Class
             Role = _role;
         }
 
-        public override string toString()
+        public override string PrintDetails()
         {
             return "Welcome back " + Role + " " + Firstname + " " + Lastname;
         }

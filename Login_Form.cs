@@ -16,7 +16,7 @@ namespace DOAN
 {
     public partial class Login_Form : Form
     {
-        static string cn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Tran Dong Phuong\\OneDrive\\Desktop\\DOAN\\_data\\hotel_db.mdf\";Integrated Security=True";
+        static string cn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\OOP_22162001\\Project\\anhuynh1905\\DOAN\\_data\\hotel_db.mdf;Integrated Security=True";
         SqlConnection sql = new SqlConnection(cn);
         SqlCommand cmd;
         SqlDataReader rdr;
